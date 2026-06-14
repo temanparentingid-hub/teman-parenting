@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teman Parenting — Temani Setiap Langkahmu Menjadi Orang Tua</title>
-  <meta name="description" content="Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan, hingga anak tumbuh remaja." />
+  <meta name="description"
+    content="Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan, hingga anak tumbuh remaja." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --teal: #14B8B8;
@@ -23,7 +33,9 @@
       --gray-100: #F3F4F6;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Nunito', sans-serif;
@@ -32,1165 +44,2367 @@
       min-height: 100vh;
     }
 
-    .font-display { font-family: 'Quicksand', sans-serif; }
+    .font-display {
+      font-family: 'Quicksand', sans-serif;
+    }
 
     /* ── HEADER ─────────────────────────────────────────────── */
     #main-header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
       transition: all 0.3s ease;
       padding: 20px 0;
     }
+
     #main-header.scrolled {
-      background: rgba(250,249,245,0.92);
+      background: rgba(250, 249, 245, 0.92);
       backdrop-filter: blur(12px);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-      border-bottom: 1px solid rgba(221,247,239,0.5);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      border-bottom: 1px solid rgba(221, 247, 239, 0.5);
       padding: 12px 0;
     }
+
     .header-inner {
-      max-width: 1280px; margin: 0 auto;
+      max-width: 1280px;
+      margin: 0 auto;
       padding: 0 24px;
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
     .logo-img {
-      width: 40px; height: 40px; border-radius: 12px;
-      object-fit: cover; border: 1px solid rgba(221,247,239,0.4);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(221, 247, 239, 0.4);
       transition: transform 0.3s;
     }
-    .logo-link:hover .logo-img { transform: scale(1.05); }
+
+    .logo-link:hover .logo-img {
+      transform: scale(1.05);
+    }
+
     .logo-name {
       font-family: 'Quicksand', sans-serif;
-      font-weight: 800; font-size: 1.1rem;
-      color: var(--dark); text-decoration: none;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--dark);
+      text-decoration: none;
       transition: color 0.2s;
     }
-    .logo-link:hover .logo-name { color: var(--teal); }
+
+    .logo-link:hover .logo-name {
+      color: var(--teal);
+    }
 
     .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 9px 20px; border-radius: 999px;
-      font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.85rem;
-      background: var(--teal); color: white;
-      text-decoration: none; border: none; cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.85rem;
+      background: var(--teal);
+      color: white;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
       transition: all 0.2s;
     }
-    .btn-primary:hover { background: var(--teal-dark); box-shadow: 0 4px 14px rgba(20,184,184,0.25); }
-    .btn-primary:active { transform: scale(0.97); }
+
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      box-shadow: 0 4px 14px rgba(20, 184, 184, 0.25);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.97);
+    }
 
     /* Mobile nav */
     .hamburger {
-      display: none; background: none; border: none; cursor: pointer;
-      padding: 8px; border-radius: 10px;
-      color: var(--dark); transition: all 0.2s;
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 10px;
+      color: var(--dark);
+      transition: all 0.2s;
     }
-    .hamburger:hover { background: rgba(221,247,239,0.5); color: var(--teal); }
-    .hamburger svg { width: 24px; height: 24px; }
+
+    .hamburger:hover {
+      background: rgba(221, 247, 239, 0.5);
+      color: var(--teal);
+    }
+
+    .hamburger svg {
+      width: 24px;
+      height: 24px;
+    }
+
     #mobile-menu {
-      display: none; position: absolute; top: 100%; left: 0; right: 0;
-      background: var(--offwhite); border-bottom: 1px solid rgba(221,247,239,0.5);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--offwhite);
+      border-bottom: 1px solid rgba(221, 247, 239, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       padding: 20px 24px;
     }
-    #mobile-menu.open { display: flex; flex-direction: column; gap: 8px; }
-    #mobile-menu a {
-      display: block; padding: 12px 16px; border-radius: 12px;
-      font-weight: 700; font-size: 1rem; color: var(--dark);
-      text-decoration: none; transition: all 0.2s;
+
+    #mobile-menu.open {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
-    #mobile-menu a:hover { color: var(--teal); background: rgba(221,247,239,0.4); }
-    #mobile-menu hr { border: none; border-top: 1px solid rgba(221,247,239,0.6); margin: 4px 0; }
-    #mobile-menu .btn-primary { width: 100%; justify-content: center; margin-top: 4px; padding: 14px; font-size: 1rem; border-radius: 14px; }
+
+    #mobile-menu a {
+      display: block;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--dark);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    #mobile-menu a:hover {
+      color: var(--teal);
+      background: rgba(221, 247, 239, 0.4);
+    }
+
+    #mobile-menu hr {
+      border: none;
+      border-top: 1px solid rgba(221, 247, 239, 0.6);
+      margin: 4px 0;
+    }
+
+    #mobile-menu .btn-primary {
+      width: 100%;
+      justify-content: center;
+      margin-top: 4px;
+      padding: 14px;
+      font-size: 1rem;
+      border-radius: 14px;
+    }
 
     @media (max-width: 767px) {
-      .hamburger { display: flex; align-items: center; justify-content: center; }
-      .btn-nav-desktop { display: none; }
+      .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-nav-desktop {
+        display: none;
+      }
     }
 
     /* ── HERO ───────────────────────────────────────────────── */
     #beranda {
       position: relative;
       padding: 120px 0 80px;
-      background: linear-gradient(180deg, rgba(221,247,239,0.3) 0%, rgba(255,241,214,0.15) 50%, var(--offwhite) 100%);
+      background: linear-gradient(180deg, rgba(221, 247, 239, 0.3) 0%, rgba(255, 241, 214, 0.15) 50%, var(--offwhite) 100%);
       overflow: hidden;
     }
+
     .hero-blob-1 {
-      position: absolute; top: -80px; right: -80px;
-      width: 450px; height: 450px; border-radius: 50%;
-      background: rgba(221,247,239,0.25); filter: blur(60px);
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: rgba(221, 247, 239, 0.25);
+      filter: blur(60px);
       pointer-events: none;
     }
+
     .hero-blob-2 {
-      position: absolute; bottom: -60px; left: -60px;
-      width: 350px; height: 350px; border-radius: 50%;
-      background: rgba(255,241,214,0.3); filter: blur(60px);
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: rgba(255, 241, 214, 0.3);
+      filter: blur(60px);
       pointer-events: none;
     }
+
     .hero-inner {
-      max-width: 1280px; margin: 0 auto; padding: 0 24px;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 40px; align-items: center;
-      position: relative; z-index: 1;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
     }
+
     .hero-tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 16px; border-radius: 999px;
-      background: var(--mint); border: 1px solid rgba(20,184,184,0.2);
-      font-size: 0.7rem; font-weight: 900; color: var(--teal);
-      text-transform: uppercase; letter-spacing: 0.08em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: var(--mint);
+      border: 1px solid rgba(20, 184, 184, 0.2);
+      font-size: 0.7rem;
+      font-weight: 900;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       margin-bottom: 16px;
     }
-    .hero-tag svg { width: 14px; height: 14px; }
+
+    .hero-tag svg {
+      width: 14px;
+      height: 14px;
+    }
+
     .hero-h1 {
       font-family: 'Quicksand', sans-serif;
-      font-weight: 800; font-size: clamp(2.5rem, 5vw, 3.8rem);
-      color: var(--dark); line-height: 1.1;
-      letter-spacing: -0.02em; margin-bottom: 20px;
-    }
-    .hero-quote {
-      background: rgba(255,255,255,0.5);
-      border-left: 4px solid var(--teal);
-      padding: 14px 18px; border-radius: 0 14px 14px 0;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      color: var(--dark);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
       margin-bottom: 20px;
     }
+
+    .hero-quote {
+      background: rgba(255, 255, 255, 0.5);
+      border-left: 4px solid var(--teal);
+      padding: 14px 18px;
+      border-radius: 0 14px 14px 0;
+      margin-bottom: 20px;
+    }
+
     .hero-quote p {
       font-family: 'Quicksand', sans-serif;
-      font-size: 1.1rem; font-weight: 500;
-      color: var(--teal); line-height: 1.6; font-style: italic;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--teal);
+      line-height: 1.6;
+      font-style: italic;
     }
+
     .hero-sublabel {
-      font-size: 0.7rem; font-weight: 900; color: var(--gray-400);
-      text-transform: uppercase; letter-spacing: 0.1em;
+      font-size: 0.7rem;
+      font-weight: 900;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
       margin-bottom: 16px;
     }
+
     .hero-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 28px; border-radius: 999px;
-      font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.9rem;
-      background: var(--teal); color: white; text-decoration: none;
-      box-shadow: 0 6px 20px rgba(20,184,184,0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.9rem;
+      background: var(--teal);
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(20, 184, 184, 0.25);
       transition: all 0.2s;
     }
-    .hero-cta:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(20,184,184,0.3); }
-    .hero-cta svg { width: 14px; height: 14px; animation: bounce 2s infinite; }
-    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+    .hero-cta:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(20, 184, 184, 0.3);
+    }
+
+    .hero-cta svg {
+      width: 14px;
+      height: 14px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(4px);
+      }
+    }
 
     /* Hero visual card */
     .hero-card {
-      background: rgba(255,255,255,0.85); backdrop-filter: blur(4px);
-      border-radius: 32px; border: 1px solid rgba(221,247,239,0.6);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-      padding: 24px; position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      border-radius: 32px;
+      border: 1px solid rgba(221, 247, 239, 0.6);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      padding: 24px;
+      position: relative;
     }
+
     .hero-card-header {
-      display: flex; align-items: center; gap: 12px;
-      background: rgba(221,247,239,0.5);
-      padding: 14px; border-radius: 16px;
-      border: 1px solid rgba(221,247,239,0.5); margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(221, 247, 239, 0.5);
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(221, 247, 239, 0.5);
+      margin-bottom: 16px;
     }
+
     .hero-card-logo {
-      width: 40px; height: 40px; border-radius: 12px;
-      background: var(--teal); color: white;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 1rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--teal);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
     }
-    .hero-card-title { font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 0.875rem; color: var(--dark); }
-    .hero-card-subtitle { font-size: 0.65rem; color: var(--gray-500); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    .hero-card-title {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 800;
+      font-size: 0.875rem;
+      color: var(--dark);
+    }
+
+    .hero-card-subtitle {
+      font-size: 0.65rem;
+      color: var(--gray-500);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
     .hero-checklist {
-      background: rgba(255,241,214,0.15); border: 1px solid rgba(255,241,214,0.8);
-      border-radius: 16px; padding: 16px; margin-bottom: 12px;
+      background: rgba(255, 241, 214, 0.15);
+      border: 1px solid rgba(255, 241, 214, 0.8);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
     }
+
     .hero-checklist-label {
-      font-size: 0.6rem; font-weight: 900; color: #92400e;
-      text-transform: uppercase; letter-spacing: 0.1em;
-      display: block; margin-bottom: 10px;
+      font-size: 0.6rem;
+      font-weight: 900;
+      color: #92400e;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 10px;
     }
+
     .hero-check-item {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 0.75rem; color: var(--gray-500); margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-bottom: 8px;
     }
-    .hero-check-item:last-child { margin-bottom: 0; opacity: 0.65; }
+
+    .hero-check-item:last-child {
+      margin-bottom: 0;
+      opacity: 0.65;
+    }
+
     .check-box {
-      width: 16px; height: 16px; border-radius: 5px;
-      background: var(--teal); color: white; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 5px;
+      background: var(--teal);
+      color: white;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
     .check-box-empty {
-      width: 16px; height: 16px; border-radius: 5px; flex-shrink: 0;
-      border: 1.5px solid #D1D5DB; background: white;
+      width: 16px;
+      height: 16px;
+      border-radius: 5px;
+      flex-shrink: 0;
+      border: 1.5px solid #D1D5DB;
+      background: white;
     }
+
     .hero-peace {
-      background: rgba(232,228,255,0.4); border: 1px solid rgba(232,228,255,0.7);
-      border-radius: 16px; padding: 12px; display: flex; gap: 10px;
+      background: rgba(232, 228, 255, 0.4);
+      border: 1px solid rgba(232, 228, 255, 0.7);
+      border-radius: 16px;
+      padding: 12px;
+      display: flex;
+      gap: 10px;
     }
-    .hero-peace-label { font-size: 0.6rem; font-weight: 900; color: #4338CA; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 4px; }
-    .hero-peace-text { font-size: 0.65rem; color: var(--gray-500); line-height: 1.5; }
+
+    .hero-peace-label {
+      font-size: 0.6rem;
+      font-weight: 900;
+      color: #4338CA;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .hero-peace-text {
+      font-size: 0.65rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
     .hero-badge {
-      position: absolute; bottom: -14px; right: -14px;
-      background: white; padding: 10px 14px; border-radius: 12px;
-      border: 1px solid var(--mint); box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      font-size: 0.65rem; font-weight: 800; color: #059669;
-      display: flex; align-items: center; gap: 6px;
+      position: absolute;
+      bottom: -14px;
+      right: -14px;
+      background: white;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--mint);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: #059669;
+      display: flex;
+      align-items: center;
+      gap: 6px;
       animation: pulse 2s infinite;
     }
-    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.8; } }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+    }
 
     @media (max-width: 1023px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-card-wrap { display: none; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card-wrap {
+        display: none;
+      }
     }
+
     @media (max-width: 640px) {
-      #beranda { padding: 100px 0 60px; }
-      .hero-h1 { font-size: 2.4rem; }
+      #beranda {
+        padding: 100px 0 60px;
+      }
+
+      .hero-h1 {
+        font-size: 2.4rem;
+      }
     }
 
     /* ── ABOUT SECTION ──────────────────────────────────────── */
     #tentang {
       padding: 80px 0;
       background: var(--offwhite);
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
+
     #tentang::before {
-      content: ''; position: absolute;
-      left: -100px; top: 50%; transform: translateY(-50%);
-      width: 280px; height: 280px; border-radius: 50%;
-      background: rgba(221,247,239,0.15); filter: blur(40px);
+      content: '';
+      position: absolute;
+      left: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(221, 247, 239, 0.15);
+      filter: blur(40px);
     }
-    .section-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
     .section-tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 14px; border-radius: 999px; font-size: 0.65rem;
-      font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       margin-bottom: 16px;
     }
+
     .section-tag-lavender {
-      background: rgba(232,228,255,0.6); border: 1px solid rgba(232,228,255,0.5);
+      background: rgba(232, 228, 255, 0.6);
+      border: 1px solid rgba(232, 228, 255, 0.5);
       color: #4338CA;
     }
-    .section-tag svg { width: 14px; height: 14px; }
+
+    .section-tag svg {
+      width: 14px;
+      height: 14px;
+    }
+
     .section-heading {
-      font-family: 'Quicksand', sans-serif; font-weight: 800;
-      font-size: clamp(1.8rem, 3vw, 2.25rem); color: var(--dark);
-      letter-spacing: -0.02em; margin-bottom: 16px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3vw, 2.25rem);
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
     }
-    .section-sub { font-size: 1rem; color: var(--gray-500); line-height: 1.7; max-width: 600px; margin: 0 auto; }
-    .section-sub strong { color: var(--teal); font-weight: 700; }
-    .section-header-center { text-align: center; margin-bottom: 64px; }
-    .benefits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-    @media (max-width: 900px) { .benefits-grid { grid-template-columns: 1fr; } }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section-sub strong {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .benefit-card {
-      background: white; border-radius: 28px; padding: 32px;
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
       border: 1px solid;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      transition: all 0.3s; position: relative; overflow: hidden;
-      display: flex; flex-direction: column; justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .benefit-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
-    .benefit-card-teal { border-color: rgba(20,184,184,0.2); }
-    .benefit-card-amber { border-color: rgba(251,191,36,0.2); }
-    .benefit-card-indigo { border-color: rgba(165,180,252,0.4); }
+
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .benefit-card-teal {
+      border-color: rgba(20, 184, 184, 0.2);
+    }
+
+    .benefit-card-amber {
+      border-color: rgba(251, 191, 36, 0.2);
+    }
+
+    .benefit-card-indigo {
+      border-color: rgba(165, 180, 252, 0.4);
+    }
+
     .benefit-icon-wrap {
-      width: 48px; height: 48px; border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.04);
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
     }
-    .benefit-icon-wrap svg { width: 24px; height: 24px; }
+
+    .benefit-icon-wrap svg {
+      width: 24px;
+      height: 24px;
+    }
+
     .benefit-badge {
-      font-size: 0.55rem; font-weight: 900; text-transform: uppercase;
-      letter-spacing: 0.1em; color: #9CA3AF; background: #F9FAFB;
-      padding: 4px 10px; border-radius: 6px;
+      font-size: 0.55rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9CA3AF;
+      background: #F9FAFB;
+      padding: 4px 10px;
+      border-radius: 6px;
     }
-    .benefit-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+
+    .benefit-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
     .benefit-title {
-      font-family: 'Quicksand', sans-serif; font-weight: 700;
-      font-size: 1.4rem; color: var(--dark); margin-bottom: 16px;
-      display: flex; align-items: center; gap: 8px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .benefit-desc { font-size: 0.85rem; color: #6B7280; line-height: 1.7; }
+
+    .benefit-desc {
+      font-size: 0.85rem;
+      color: #6B7280;
+      line-height: 1.7;
+    }
+
     .benefit-footer {
-      margin-top: 28px; padding-top: 16px;
+      margin-top: 28px;
+      padding-top: 16px;
       border-top: 1px solid #F3F4F6;
-      display: flex; align-items: center; justify-content: space-between;
-      font-size: 0.7rem; font-weight: 700; color: rgba(47,58,58,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(47, 58, 58, 0.7);
     }
-    .dot-teal { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+
+    .dot-teal {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
     .trust-note {
-      margin-top: 56px; text-align: center;
-      font-size: 0.65rem; font-weight: 800; color: #9CA3AF;
-      text-transform: uppercase; letter-spacing: 0.12em;
+      margin-top: 56px;
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: #9CA3AF;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
     }
 
     /* ── PRODUCTS ───────────────────────────────────────────── */
     #produk {
-      padding: 60px 0 80px; scroll-margin-top: 80px;
+      padding: 60px 0 80px;
+      scroll-margin-top: 80px;
     }
-    .catalog-header { text-align: center; margin-bottom: 40px; }
+
+    .catalog-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
     .catalog-tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 14px; border-radius: 999px;
-      background: var(--mint); border: 1px solid rgba(20,184,184,0.2);
-      font-size: 0.65rem; font-weight: 900; color: var(--teal);
-      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: var(--mint);
+      border: 1px solid rgba(20, 184, 184, 0.2);
+      font-size: 0.65rem;
+      font-weight: 900;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
     }
+
     .catalog-h2 {
-      font-family: 'Quicksand', sans-serif; font-weight: 900;
-      font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--dark);
-      letter-spacing: -0.02em; margin-bottom: 8px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
     }
-    .catalog-sub { font-size: 0.85rem; color: var(--gray-500); }
+
+    .catalog-sub {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
 
     /* Tab controls */
     .tab-wrap {
-      max-width: 680px; margin: 0 auto 40px;
-      background: white; padding: 10px;
-      border-radius: 20px; border: 1px solid rgba(221,247,239,0.5);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      display: flex; align-items: center; gap: 12px;
+      max-width: 680px;
+      margin: 0 auto 40px;
+      background: white;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(221, 247, 239, 0.5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
+
     .tab-btns {
-      display: grid; grid-template-columns: 1fr 1fr;
-      background: var(--offwhite); border-radius: 14px;
-      border: 1px solid #F0F0F0; padding: 4px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--offwhite);
+      border-radius: 14px;
+      border: 1px solid #F0F0F0;
+      padding: 4px;
       flex-shrink: 0;
     }
+
     .tab-btn {
-      padding: 8px 20px; border-radius: 10px; border: none; cursor: pointer;
-      font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.75rem;
-      color: var(--gray-500); background: transparent; transition: all 0.2s;
+      padding: 8px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      background: transparent;
+      transition: all 0.2s;
     }
-    .tab-btn.active { background: var(--teal); color: white; box-shadow: 0 2px 6px rgba(20,184,184,0.2); }
-    .tab-search-wrap { position: relative; flex: 1; }
+
+    .tab-btn.active {
+      background: var(--teal);
+      color: white;
+      box-shadow: 0 2px 6px rgba(20, 184, 184, 0.2);
+    }
+
+    .tab-search-wrap {
+      position: relative;
+      flex: 1;
+    }
+
     .tab-search {
-      width: 100%; padding: 9px 32px 9px 36px;
-      border-radius: 12px; border: 1px solid #E5E7EB;
-      background: var(--offwhite); font-family: 'Nunito', sans-serif;
-      font-size: 0.75rem; color: var(--dark);
-      outline: none; transition: all 0.2s;
+      width: 100%;
+      padding: 9px 32px 9px 36px;
+      border-radius: 12px;
+      border: 1px solid #E5E7EB;
+      background: var(--offwhite);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      color: var(--dark);
+      outline: none;
+      transition: all 0.2s;
     }
-    .tab-search:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(20,184,184,0.1); }
-    .tab-search::placeholder { color: #9CA3AF; }
-    .search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; color: #9CA3AF; }
+
+    .tab-search:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(20, 184, 184, 0.1);
+    }
+
+    .tab-search::placeholder {
+      color: #9CA3AF;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      color: #9CA3AF;
+    }
+
     .search-reset {
-      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-      font-size: 0.65rem; font-weight: 700; color: #9CA3AF;
-      cursor: pointer; background: none; border: none; padding: 4px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #9CA3AF;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
       display: none;
     }
+
     @media (max-width: 640px) {
-      .tab-wrap { flex-direction: column; gap: 8px; }
-      .tab-search-wrap { width: 100%; }
+      .tab-wrap {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .tab-search-wrap {
+        width: 100%;
+      }
     }
 
     /* Product grid */
-    .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 860px; margin: 0 auto; }
-    @media (max-width: 700px) { .products-grid { grid-template-columns: 1fr; } }
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .product-card {
-      background: white; border-radius: 24px;
-      border: 1px solid rgba(221,247,239,0.5);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      overflow: hidden; display: flex; flex-direction: column;
+      background: white;
+      border-radius: 24px;
+      border: 1px solid rgba(221, 247, 239, 0.5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: all 0.3s;
     }
-    .product-card:hover { border-color: rgba(20,184,184,0.3); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+
+    .product-card:hover {
+      border-color: rgba(20, 184, 184, 0.3);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    }
+
     .product-cover {
-      padding: 20px 24px; height: 130px;
-      display: flex; flex-direction: column; justify-content: space-between;
-      position: relative; overflow: hidden;
+      padding: 20px 24px;
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
     }
-    .cover-mint { background: linear-gradient(135deg, rgba(221,247,239,0.8) 0%, rgba(20,184,184,0.12) 100%); color: var(--teal); }
-    .cover-cream { background: linear-gradient(135deg, rgba(255,241,214,1) 0%, rgba(251,191,36,0.15) 100%); color: #B45309; }
-    .cover-lavender { background: linear-gradient(135deg, rgba(232,228,255,1) 0%, rgba(99,102,241,0.1) 100%); color: #4338CA; }
-    .cover-rose { background: linear-gradient(135deg, rgba(255,228,230,0.9) 0%, rgba(251,207,232,0.5) 100%); color: #E11D48; }
-    .cover-top { display: flex; align-items: center; justify-content: space-between; }
+
+    .cover-mint {
+      background: linear-gradient(135deg, rgba(221, 247, 239, 0.8) 0%, rgba(20, 184, 184, 0.12) 100%);
+      color: var(--teal);
+    }
+
+    .cover-cream {
+      background: linear-gradient(135deg, rgba(255, 241, 214, 1) 0%, rgba(251, 191, 36, 0.15) 100%);
+      color: #B45309;
+    }
+
+    .cover-lavender {
+      background: linear-gradient(135deg, rgba(232, 228, 255, 1) 0%, rgba(99, 102, 241, 0.1) 100%);
+      color: #4338CA;
+    }
+
+    .cover-rose {
+      background: linear-gradient(135deg, rgba(255, 228, 230, 0.9) 0%, rgba(251, 207, 232, 0.5) 100%);
+      color: #E11D48;
+    }
+
+    .cover-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .cover-badge {
-      font-size: 0.6rem; font-weight: 900; text-transform: uppercase;
-      background: rgba(255,255,255,0.95); color: var(--dark);
-      padding: 3px 8px; border-radius: 6px; letter-spacing: 0.05em;
-    }
-    .cover-stars { display: flex; gap: 1px; }
-    .cover-stars svg { width: 12px; height: 12px; fill: #F59E0B; color: #F59E0B; }
-    .cover-eyebrow { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; margin-bottom: 2px; }
-    .cover-title {
-      font-family: 'Quicksand', sans-serif; font-weight: 900;
-      font-size: 1.2rem; color: var(--dark); line-height: 1.2;
-    }
-    .product-body { padding: 20px 20px 0; flex: 1; }
-    .product-desc { font-size: 0.72rem; color: #6B7280; line-height: 1.65; margin-bottom: 14px; }
-    .features-list {
-      background: rgba(250,249,245,0.7); border-radius: 12px;
-      border: 1px solid #F3F4F6; padding: 12px; margin-bottom: 0;
-    }
-    .feature-item {
-      display: flex; align-items: flex-start; gap: 8px;
-      font-size: 0.7rem; color: #374151; margin-bottom: 6px;
-    }
-    .feature-item:last-child { margin-bottom: 0; }
-    .feature-check { width: 14px; height: 14px; flex-shrink: 0; color: var(--teal); margin-top: 1px; }
-    .product-footer { padding: 16px 20px; border-top: 1px solid #F9FAFB; margin-top: 16px; }
-    .price-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-    .price-label { font-size: 0.6rem; font-weight: 700; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
-    .price-promo {
-      font-size: 0.55rem; font-weight: 900; text-transform: uppercase;
-      color: #E11D48; background: #FFF1F2; border: 1px solid #FECDD3;
-      padding: 2px 6px; border-radius: 4px; letter-spacing: 0.05em;
-      display: inline-block; margin-left: 6px;
-    }
-    .price-main {
-      font-family: 'Quicksand', sans-serif; font-weight: 900;
-      font-size: 1.1rem; color: var(--teal); display: flex; align-items: baseline; gap: 6px;
-    }
-    .price-original { font-size: 0.75rem; color: #9CA3AF; text-decoration: line-through; font-weight: 400; }
-    .access-badge {
-      font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
-      color: #059669; background: #ECFDF5; padding: 4px 8px; border-radius: 6px;
+      font-size: 0.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--dark);
+      padding: 3px 8px;
+      border-radius: 6px;
       letter-spacing: 0.05em;
     }
-    .btn-card-cta {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      width: 100%; padding: 10px; border-radius: 999px;
-      font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.75rem;
-      background: var(--teal); color: white; text-decoration: none;
-      border: none; cursor: pointer; transition: all 0.2s;
+
+    .cover-stars {
+      display: flex;
+      gap: 1px;
     }
-    .btn-card-cta:hover { background: var(--teal-dark); }
-    .btn-card-cta svg { width: 14px; height: 14px; }
+
+    .cover-stars svg {
+      width: 12px;
+      height: 12px;
+      fill: #F59E0B;
+      color: #F59E0B;
+    }
+
+    .cover-eyebrow {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.7;
+      margin-bottom: 2px;
+    }
+
+    .cover-title {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .product-body {
+      padding: 20px 20px 0;
+      flex: 1;
+    }
+
+    .product-desc {
+      font-size: 0.72rem;
+      color: #6B7280;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .features-list {
+      background: rgba(250, 249, 245, 0.7);
+      border-radius: 12px;
+      border: 1px solid #F3F4F6;
+      padding: 12px;
+      margin-bottom: 0;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.7rem;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    .feature-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-check {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      color: var(--teal);
+      margin-top: 1px;
+    }
+
+    .product-footer {
+      padding: 16px 20px;
+      border-top: 1px solid #F9FAFB;
+      margin-top: 16px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .price-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: #9CA3AF;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+
+    .price-promo {
+      font-size: 0.55rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #E11D48;
+      background: #FFF1F2;
+      border: 1px solid #FECDD3;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      margin-left: 6px;
+    }
+
+    .price-main {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--teal);
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .price-original {
+      font-size: 0.75rem;
+      color: #9CA3AF;
+      text-decoration: line-through;
+      font-weight: 400;
+    }
+
+    .access-badge {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #059669;
+      background: #ECFDF5;
+      padding: 4px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 999px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.75rem;
+      background: var(--teal);
+      color: white;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-card-cta:hover {
+      background: var(--teal-dark);
+    }
+
+    .btn-card-cta svg {
+      width: 14px;
+      height: 14px;
+    }
 
     /* Recommendations */
-    #rekomendasi { scroll-margin-top: 80px; }
-    .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 860px; margin: 0 auto; }
-    @media (max-width: 700px) { .rec-grid { grid-template-columns: 1fr; } }
+    #rekomendasi {
+      scroll-margin-top: 80px;
+    }
+
+    .rec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) {
+      .rec-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .rec-card {
-      background: white; border-radius: 16px;
-      border: 1px solid #E5E7EB; padding: 16px;
-      display: flex; gap: 14px; position: relative; overflow: hidden;
-      transition: all 0.25s; text-decoration: none;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #E5E7EB;
+      padding: 16px;
+      display: flex;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s;
+      text-decoration: none;
     }
-    .rec-card:hover { border-color: rgba(221,247,239,0.7); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+
+    .rec-card:hover {
+      border-color: rgba(221, 247, 239, 0.7);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
     .rec-number-bg {
-      position: absolute; right: 12px; top: 8px;
-      font-family: 'Quicksand', sans-serif; font-size: 2.5rem; font-weight: 900;
-      color: rgba(255,241,214,0.4); pointer-events: none; select: none;
+      position: absolute;
+      right: 12px;
+      top: 8px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: rgba(255, 241, 214, 0.4);
+      pointer-events: none;
+      select: none;
     }
+
     .rec-num-avatar {
-      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--cream), rgba(251,191,36,0.2));
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Quicksand', sans-serif; font-weight: 900;
-      font-size: 0.85rem; color: #B45309;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--cream), rgba(251, 191, 36, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 900;
+      font-size: 0.85rem;
+      color: #B45309;
     }
-    .rec-content { flex: 1; min-width: 0; position: relative; z-index: 1; }
-    .rec-title { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--dark); margin-bottom: 4px; }
-    .rec-desc { font-size: 0.7rem; color: var(--gray-500); line-height: 1.55; margin-bottom: 12px; }
+
+    .rec-content {
+      flex: 1;
+      min-width: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .rec-title {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .rec-desc {
+      font-size: 0.7rem;
+      color: var(--gray-500);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
     .rec-link {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 0.7rem; font-weight: 900; color: var(--teal); text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.7rem;
+      font-weight: 900;
+      color: var(--teal);
+      text-decoration: none;
       transition: color 0.2s;
     }
-    .rec-link:hover { color: var(--teal-dark); }
-    .rec-link svg { width: 10px; height: 10px; }
+
+    .rec-link:hover {
+      color: var(--teal-dark);
+    }
+
+    .rec-link svg {
+      width: 10px;
+      height: 10px;
+    }
 
     /* ── CTA BANNER ─────────────────────────────────────────── */
     #cta-banner {
       padding: 64px 0;
-      background: linear-gradient(135deg, var(--mint) 0%, rgba(221,247,239,0.5) 60%, rgba(255,241,214,0.3) 100%);
-      border-top: 1px solid rgba(20,184,184,0.08);
-      border-bottom: 1px solid rgba(20,184,184,0.08);
+      background: linear-gradient(135deg, var(--mint) 0%, rgba(221, 247, 239, 0.5) 60%, rgba(255, 241, 214, 0.3) 100%);
+      border-top: 1px solid rgba(20, 184, 184, 0.08);
+      border-bottom: 1px solid rgba(20, 184, 184, 0.08);
     }
-    .cta-inner { max-width: 700px; margin: 0 auto; padding: 0 24px; text-align: center; }
+
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
     .cta-tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 14px; border-radius: 999px; font-size: 0.65rem;
-      font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em;
-      background: white; border: 1px solid rgba(20,184,184,0.15);
-      color: var(--teal); margin-bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: white;
+      border: 1px solid rgba(20, 184, 184, 0.15);
+      color: var(--teal);
+      margin-bottom: 20px;
     }
-    .cta-tag svg { width: 14px; height: 14px; fill: var(--teal); }
+
+    .cta-tag svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--teal);
+    }
+
     .cta-quote {
-      font-family: 'Quicksand', sans-serif; font-weight: 900;
-      font-size: clamp(1.25rem, 3vw, 1.65rem); color: var(--dark);
-      line-height: 1.35; margin-bottom: 16px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.25rem, 3vw, 1.65rem);
+      color: var(--dark);
+      line-height: 1.35;
+      margin-bottom: 16px;
     }
-    .cta-sub { font-size: 0.875rem; color: #6B7280; line-height: 1.65; margin-bottom: 28px; }
+
+    .cta-sub {
+      font-size: 0.875rem;
+      color: #6B7280;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
 
     /* ── SOCIAL ─────────────────────────────────────────────── */
-    #sosial { padding: 64px 0; background: white; border-bottom: 1px solid rgba(221,247,239,0.3); scroll-margin-top: 80px; }
-    .socials-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 14px; margin-bottom: 48px; }
-    @media (max-width: 900px) { .socials-grid { grid-template-columns: repeat(3,1fr); } }
-    @media (max-width: 480px) { .socials-grid { grid-template-columns: repeat(2,1fr); } }
+    #sosial {
+      padding: 64px 0;
+      background: white;
+      border-bottom: 1px solid rgba(221, 247, 239, 0.3);
+      scroll-margin-top: 80px;
+    }
+
+    .socials-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 900px) {
+      .socials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .socials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     .social-card {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      padding: 20px 12px; border-radius: 18px;
-      border: 1px solid #F0F0F0; text-decoration: none;
-      transition: all 0.25s; cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 12px;
+      border-radius: 18px;
+      border: 1px solid #F0F0F0;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
     }
-    .social-card:hover { border-color: rgba(20,184,184,0.2); background: rgba(221,247,239,0.05); transform: translateY(-2px); }
+
+    .social-card:hover {
+      border-color: rgba(20, 184, 184, 0.2);
+      background: rgba(221, 247, 239, 0.05);
+      transform: translateY(-2px);
+    }
+
     .social-icon {
-      width: 44px; height: 44px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-bottom: 12px; transition: transform 0.2s;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 12px;
+      transition: transform 0.2s;
     }
-    .social-card:hover .social-icon { transform: scale(1.1); }
-    .social-icon svg { width: 20px; height: 20px; }
-    .social-label { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.75rem; color: var(--dark); transition: color 0.2s; }
-    .social-card:hover .social-label { color: var(--teal); }
-    .social-sublabel { font-size: 0.6rem; color: #9CA3AF; font-weight: 700; margin-top: 2px; text-align: center; }
+
+    .social-card:hover .social-icon {
+      transform: scale(1.1);
+    }
+
+    .social-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .social-label {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--dark);
+      transition: color 0.2s;
+    }
+
+    .social-card:hover .social-label {
+      color: var(--teal);
+    }
+
+    .social-sublabel {
+      font-size: 0.6rem;
+      color: #9CA3AF;
+      font-weight: 700;
+      margin-top: 2px;
+      text-align: center;
+    }
+
     /* icon colors */
-    .ig { background: linear-gradient(135deg, #f43f5e, #ec4899, #a855f7); color: white; }
-    .tiktok { background: #1c1917; color: white; }
-    .youtube { background: #DC2626; color: white; }
-    .wa-channel { background: #059669; color: white; }
-    .facebook { background: #2563EB; color: white; }
-    .chat-admin { background: var(--teal); color: white; }
+    .ig {
+      background: linear-gradient(135deg, #f43f5e, #ec4899, #a855f7);
+      color: white;
+    }
+
+    .tiktok {
+      background: #1c1917;
+      color: white;
+    }
+
+    .youtube {
+      background: #DC2626;
+      color: white;
+    }
+
+    .wa-channel {
+      background: #059669;
+      color: white;
+    }
+
+    .facebook {
+      background: #2563EB;
+      color: white;
+    }
+
+    .chat-admin {
+      background: var(--teal);
+      color: white;
+    }
 
     .community-box {
-      max-width: 640px; margin: 0 auto;
-      background: linear-gradient(135deg, rgba(221,247,239,0.4), rgba(255,241,214,0.3));
-      border: 1px solid rgba(221,247,239,0.5); border-radius: 28px;
-      padding: 32px; text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(221, 247, 239, 0.4), rgba(255, 241, 214, 0.3));
+      border: 1px solid rgba(221, 247, 239, 0.5);
+      border-radius: 28px;
+      padding: 32px;
+      text-align: center;
     }
-    .community-emoji { font-size: 1.5rem; display: block; margin-bottom: 8px; }
-    .community-title { font-family: 'Quicksand', sans-serif; font-weight: 900; font-size: 0.95rem; color: var(--dark); margin-bottom: 8px; }
-    .community-sub { font-size: 0.8rem; color: rgba(47,58,58,0.75); line-height: 1.65; max-width: 400px; margin: 0 auto 20px; }
+
+    .community-emoji {
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .community-title {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .community-sub {
+      font-size: 0.8rem;
+      color: rgba(47, 58, 58, 0.75);
+      line-height: 1.65;
+      max-width: 400px;
+      margin: 0 auto 20px;
+    }
 
     /* ── FOOTER ─────────────────────────────────────────────── */
     footer {
-      background: var(--dark); color: white;
+      background: var(--dark);
+      color: white;
       padding: 64px 0 48px;
     }
-    .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
     .footer-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 32px; padding-bottom: 48px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       margin-bottom: 32px;
     }
-    @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
-    .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-    .footer-logo-img { width: 36px; height: 36px; border-radius: 10px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1); }
-    .footer-brand-name { font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 1.1rem; color: white; }
-    .footer-quote {
-      font-family: 'Quicksand', sans-serif; font-style: italic;
-      font-size: 0.875rem; color: rgba(221,247,239,0.85); line-height: 1.65; max-width: 420px;
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 16px; }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .footer-logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand-name {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: white;
+    }
+
+    .footer-quote {
+      font-family: 'Quicksand', sans-serif;
+      font-style: italic;
+      font-size: 0.875rem;
+      color: rgba(221, 247, 239, 0.85);
+      line-height: 1.65;
+      max-width: 420px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin-bottom: 16px;
+    }
+
     .footer-links a {
-      color: #D1D5DB; text-decoration: none; font-size: 0.85rem; font-weight: 700;
+      color: #D1D5DB;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
       transition: color 0.2s;
     }
-    .footer-links a:hover { color: var(--mint); }
-    .footer-contact { font-size: 0.75rem; color: #6B7280; }
-    .footer-contact a { color: var(--mint); text-decoration: none; }
-    .footer-contact a:hover { text-decoration: underline; }
-    .footer-right { display: flex; flex-direction: column; justify-content: space-between; }
-    .disclaimer {
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px; padding: 16px; margin-bottom: 24px;
+
+    .footer-links a:hover {
+      color: var(--mint);
     }
-    .disclaimer-label { font-size: 0.6rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: #D1D5DB; margin-bottom: 6px; display: block; }
-    .disclaimer-text { font-size: 0.75rem; color: #6B7280; line-height: 1.65; }
-    .copyright { text-align: center; font-size: 0.75rem; color: #6B7280; font-weight: 500; }
+
+    .footer-contact {
+      font-size: 0.75rem;
+      color: #6B7280;
+    }
+
+    .footer-contact a {
+      color: var(--mint);
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .disclaimer {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .disclaimer-label {
+      font-size: 0.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #D1D5DB;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .disclaimer-text {
+      font-size: 0.75rem;
+      color: #6B7280;
+      line-height: 1.65;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #6B7280;
+      font-weight: 500;
+    }
 
     /* ── EMPTY STATE ──────────────────────────────────────────── */
     .empty-state {
-      max-width: 400px; margin: 0 auto; text-align: center;
-      padding: 40px; background: white; border-radius: 20px;
-      border: 1px solid rgba(221,247,239,0.3);
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      border: 1px solid rgba(221, 247, 239, 0.3);
     }
-    .empty-state svg { width: 40px; height: 40px; color: #F59E0B; margin: 0 auto 12px; display: block; opacity: 0.8; }
-    .empty-state h3 { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--dark); margin-bottom: 12px; }
+
+    .empty-state svg {
+      width: 40px;
+      height: 40px;
+      color: #F59E0B;
+      margin: 0 auto 12px;
+      display: block;
+      opacity: 0.8;
+    }
+
+    .empty-state h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
     .empty-reset {
-      padding: 8px 16px; border-radius: 10px; border: none; cursor: pointer;
-      background: var(--mint); color: var(--teal);
-      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.75rem;
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: var(--mint);
+      color: var(--teal);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
       transition: all 0.2s;
     }
-    .empty-reset:hover { background: rgba(20,184,184,0.15); }
+
+    .empty-reset:hover {
+      background: rgba(20, 184, 184, 0.15);
+    }
 
     /* Tab panels */
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
 
     /* ── UTILS ──────────────────────────────────────────────── */
-    .hidden { display: none !important; }
-    .text-teal { color: var(--teal); }
+    .hidden {
+      display: none !important;
+    }
+
+    .text-teal {
+      color: var(--teal);
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- ╔══════════════════════════════════════╗ -->
-<!--  HEADER                               -->
-<!-- ╚══════════════════════════════════════╝ -->
-<header id="main-header">
-  <div class="header-inner">
-    <a href="#beranda" class="logo-link">
-      <img
-        src="https://lh3.googleusercontent.com/d/1NDEifhlfHjjY2yZLBeVe70RscWh57ByQ"
-        class="logo-img" alt="Logo Teman Parenting"
-        referrerpolicy="no-referrer"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      />
-      <div style="display:none; width:40px; height:40px; border-radius:12px; background:#14B8B8; color:white; align-items:center; justify-content:center; font-family:'Quicksand',sans-serif; font-weight:800; font-size:1rem;">TP</div>
-      <span class="logo-name">Teman Parenting</span>
-    </a>
-    <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer" class="btn-primary btn-nav-desktop">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Chat Admin
-    </a>
-    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
-      <svg id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-  </div>
-  <div id="mobile-menu">
-    <a href="#beranda" class="mobile-nav-link">Beranda</a>
-    <a href="#produk" class="mobile-nav-link">Produk Digital</a>
-    <a href="#rekomendasi" class="mobile-nav-link">Rekomendasi</a>
-    <a href="#sosial" class="mobile-nav-link">Sosial Media</a>
-    <hr/>
-    <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer" class="btn-primary">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Chat Admin
-    </a>
-  </div>
-</header>
-
-<!-- ╔══════════════════════════════════════╗ -->
-<!--  HERO                                 -->
-<!-- ╚══════════════════════════════════════╝ -->
-<section id="beranda">
-  <div class="hero-blob-1"></div>
-  <div class="hero-blob-2"></div>
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-tag">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.88 5.79H20l-4.94 3.59 1.88 5.79L12 14.58l-4.94 3.59 1.88-5.79L4 8.79h6.12z"/></svg>
-        Partner Perjalanan Moms &amp; Dads
-      </div>
-      <h1 class="hero-h1">Teman<br/>Parenting</h1>
-      <div class="hero-quote">
-        <p>&ldquo;Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan, hingga anak tumbuh remaja.&rdquo;</p>
-      </div>
-      <p class="hero-sublabel">☘️ Temukan Produk Pilihan Kami:</p>
-      <a href="#produk" class="hero-cta" id="cta-hero-scroll">
-        Lihat Produk Pilihan
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19,12 12,19 5,12"/></svg>
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!--  HEADER                               -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="#beranda" class="logo-link">
+        <img src="https://lh3.googleusercontent.com/d/1NDEifhlfHjjY2yZLBeVe70RscWh57ByQ" class="logo-img"
+          alt="Logo Teman Parenting" referrerpolicy="no-referrer"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div
+          style="display:none; width:40px; height:40px; border-radius:12px; background:#14B8B8; color:white; align-items:center; justify-content:center; font-family:'Quicksand',sans-serif; font-weight:800; font-size:1rem;">
+          TP</div>
+        <span class="logo-name">Teman Parenting</span>
+      </a>
+      <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer" class="btn-primary btn-nav-desktop">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+        Chat Admin
+      </a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <svg id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          style="display:none;">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu">
+      <a href="#beranda" class="mobile-nav-link">Beranda</a>
+      <a href="#produk" class="mobile-nav-link">Produk Digital</a>
+      <a href="#rekomendasi" class="mobile-nav-link">Rekomendasi</a>
+      <a href="#sosial" class="mobile-nav-link">Sosial Media</a>
+      <hr />
+      <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+        Chat Admin
       </a>
     </div>
-    <div class="hero-card-wrap">
-      <div class="hero-card">
-        <div class="hero-card-header">
-          <div class="hero-card-logo">TP</div>
-          <div>
-            <div class="hero-card-title">Catalogs</div>
-            <div class="hero-card-subtitle">Edukasi &amp; Perlengkapan</div>
-          </div>
+  </header>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!--  HERO                                 -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="beranda">
+    <div class="hero-blob-1"></div>
+    <div class="hero-blob-2"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3l1.88 5.79H20l-4.94 3.59 1.88 5.79L12 14.58l-4.94 3.59 1.88-5.79L4 8.79h6.12z" />
+          </svg>
+          Partner Perjalanan Moms &amp; Dads
         </div>
-        <div class="hero-checklist">
-          <span class="hero-checklist-label">Persiapan Utama</span>
-          <div class="hero-check-item">
-            <div class="check-box">
-              <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
-            </div>
-            Perencanaan Anggaran Persalinan
-          </div>
-          <div class="hero-check-item">
-            <div class="check-box">
-              <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
-            </div>
-            Daftar Nama Anak Impian
-          </div>
-          <div class="hero-check-item">
-            <div class="check-box-empty"></div>
-            Review Kebutuhan Sprei / Popok
-          </div>
+        <h1 class="hero-h1">Teman<br />Parenting</h1>
+        <div class="hero-quote">
+          <p>&ldquo;Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan, hingga anak tumbuh
+            remaja.&rdquo;</p>
         </div>
-        <div class="hero-peace">
-          <span style="font-size:1.4rem; flex-shrink:0;">💚</span>
-          <div>
-            <span class="hero-peace-label">Moms &amp; Dads Tenang</span>
-            <p class="hero-peace-text">Persiapan lengkap, hati tenang, asuh si kecil dengan gembira dan tidak sendirian.</p>
-          </div>
-        </div>
-        <div class="hero-badge">⚡ 100% Praktis &amp; Aman</div>
+        <p class="hero-sublabel">☘️ Temukan Produk Pilihan Kami:</p>
+        <a href="#produk" class="hero-cta" id="cta-hero-scroll">
+          Lihat Produk Pilihan
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <polyline points="19,12 12,19 5,12" />
+          </svg>
+        </a>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ╔══════════════════════════════════════╗ -->
-<!--  PRODUCTS CATALOG                     -->
-<!-- ╚══════════════════════════════════════╝ -->
-<section id="produk">
-  <div id="rekomendasi" style="height:0; display:block; margin-top:-80px; padding-top:80px; visibility:hidden;"></div>
-  <div class="section-inner">
-    <div class="catalog-header">
-      <div class="catalog-tag">✨ Pilihan Ibu &amp; Keluarga</div>
-      <h2 class="catalog-h2">Katalog &amp; Rekomendasi</h2>
-      <p class="catalog-sub">Dapatkan sarana digital premium dan produk fisik bayi pilihan yang tervalidasi serta murni membantu pengasuhan harian Anda.</p>
-    </div>
-
-    <!-- Tab bar + search -->
-    <div class="tab-wrap">
-      <div class="tab-btns">
-        <button class="tab-btn active" id="btn-digital" onclick="switchTab('digital')">📊 Produk Digital</button>
-        <button class="tab-btn" id="btn-rekomendasi" onclick="switchTab('rekomendasi')">🛍️ Rekomendasi</button>
-      </div>
-      <div class="tab-search-wrap">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" class="tab-search" id="search-input" placeholder="Cari solusi kalkulator &amp; nama..." oninput="onSearch()" />
-        <button class="search-reset" id="search-reset" onclick="clearSearch()">Reset</button>
-      </div>
-    </div>
-
-    <!-- DIGITAL PRODUCTS TAB -->
-    <div id="tab-digital" class="tab-panel active">
-      <div class="products-grid" id="products-grid">
-
-        <!-- Baby Budget Plan -->
-        <div class="product-card" data-search="baby budget plan kehamilan persiapan bayi planner checklist">
-          <div class="product-cover cover-mint">
-            <div class="cover-top">
-              <span class="cover-badge">📈 Google Sheets</span>
-              <div class="cover-stars">
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-              </div>
-            </div>
+      <div class="hero-card-wrap">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-logo">TP</div>
             <div>
-              <div class="cover-eyebrow">Alat Bantu Orangtua</div>
-              <h3 class="cover-title">Baby Budget Plan</h3>
+              <div class="hero-card-title">Catalogs</div>
+              <div class="hero-card-subtitle">Edukasi &amp; Perlengkapan</div>
             </div>
           </div>
-          <div class="product-body">
-            <p class="product-desc">Template perencanaan budget dan persiapan bayi untuk mencatat kebutuhan kehamilan, mengontrol pengeluaran, serta memantau persiapan menuju persalinan dalam satu tempat yang rapi.</p>
-            <div class="features-list">
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Dashboard budget, usia kehamilan, HPL, jadwal kontrol &amp; progres</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Pencatatan rencana dan realisasi pengeluaran kehamilan</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Wishlist kebutuhan ibu dan bayi serta checklist setiap trimester</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Catatan kunjungan medis, hospital bag, nama bayi &amp; rumah sakit</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Format praktis, mudah diedit di Google Sheets</span></div>
-            </div>
-          </div>
-          <div class="product-footer">
-            <div class="price-row">
-              <div>
-                <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
-                <div class="price-main">Rp55.000 <span class="price-original">Rp150.000</span></div>
+          <div class="hero-checklist">
+            <span class="hero-checklist-label">Persiapan Utama</span>
+            <div class="hero-check-item">
+              <div class="check-box">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12">
+                  <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+                </svg>
               </div>
-              <span class="access-badge">Akses Selamanya</span>
+              Perencanaan Anggaran Persalinan
             </div>
-            <a href="https://s.id/CekProduk-Babybudgetplan" target="_blank" rel="noreferrer" class="btn-card-cta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Dapatkan Aksesnya
-            </a>
-          </div>
-        </div>
-
-        <!-- Nama Kecil -->
-        <div class="product-card" data-search="nama kecil nama bayi aplikasi">
-          <div class="product-cover cover-cream">
-            <div class="cover-top">
-              <span class="cover-badge">📱 Web App</span>
-              <div class="cover-stars">
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <div class="hero-check-item">
+              <div class="check-box">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12">
+                  <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+                </svg>
               </div>
+              Daftar Nama Anak Impian
             </div>
+            <div class="hero-check-item">
+              <div class="check-box-empty"></div>
+              Review Kebutuhan Sprei / Popok
+            </div>
+          </div>
+          <div class="hero-peace">
+            <span style="font-size:1.4rem; flex-shrink:0;">💚</span>
             <div>
-              <div class="cover-eyebrow">Alat Bantu Orangtua</div>
-              <h3 class="cover-title">Nama Kecil</h3>
+              <span class="hero-peace-label">Moms &amp; Dads Tenang</span>
+              <p class="hero-peace-text">Persiapan lengkap, hati tenang, asuh si kecil dengan gembira dan tidak
+                sendirian.</p>
             </div>
           </div>
-          <div class="product-body">
-            <p class="product-desc">Aplikasi pencari nama bayi yang membantu Moms &amp; Dads menemukan inspirasi nama anak berdasarkan arti, asal bahasa, gender, awalan huruf, dan kombinasi nama.</p>
-            <div class="features-list">
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Database 5.000+ pilihan nama bayi bermakna indah</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Filter pencarian berdasarkan gender &amp; awalan huruf</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Penyaringan berdasarkan asal bahasa (Arab, Jawa, Sanskerta, Modern, dll.)</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Fitur favorit &amp; voting bersama pasangan</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Akses praktis lewat browser HP atau notebook</span></div>
-            </div>
-          </div>
-          <div class="product-footer">
-            <div class="price-row">
+          <div class="hero-badge">⚡ 100% Praktis &amp; Aman</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!--  PRODUCTS CATALOG                     -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="produk">
+    <div id="rekomendasi" style="height:0; display:block; margin-top:-80px; padding-top:80px; visibility:hidden;"></div>
+    <div class="section-inner">
+      <div class="catalog-header">
+        <div class="catalog-tag">✨ Pilihan Ibu &amp; Keluarga</div>
+        <h2 class="catalog-h2">Katalog &amp; Rekomendasi</h2>
+        <p class="catalog-sub">Dapatkan sarana digital premium dan produk fisik bayi pilihan yang tervalidasi serta
+          murni membantu pengasuhan harian Anda.</p>
+      </div>
+
+      <!-- Tab bar + search -->
+      <div class="tab-wrap">
+        <div class="tab-btns">
+          <button class="tab-btn active" id="btn-digital" onclick="switchTab('digital')">📊 Produk Digital</button>
+          <button class="tab-btn" id="btn-rekomendasi" onclick="switchTab('rekomendasi')">🛍️ Rekomendasi</button>
+        </div>
+        <div class="tab-search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" class="tab-search" id="search-input" placeholder="Cari solusi kalkulator &amp; nama..."
+            oninput="onSearch()" />
+          <button class="search-reset" id="search-reset" onclick="clearSearch()">Reset</button>
+        </div>
+      </div>
+
+      <!-- DIGITAL PRODUCTS TAB -->
+      <div id="tab-digital" class="tab-panel active">
+        <div class="products-grid" id="products-grid">
+
+          <!-- Baby Budget Plan -->
+          <div class="product-card" data-search="baby budget plan kehamilan persiapan bayi planner checklist">
+            <div class="product-cover cover-mint">
+              <div class="cover-top">
+                <span class="cover-badge">📈 Google Sheets</span>
+                <div class="cover-stars">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                </div>
+              </div>
               <div>
-                <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
-                <div class="price-main">Rp15.000 <span class="price-original">Rp50.000</span></div>
+                <div class="cover-eyebrow">Alat Bantu Orangtua</div>
+                <h3 class="cover-title">Baby Budget Plan</h3>
               </div>
-              <span class="access-badge">Akses Selamanya</span>
             </div>
-            <a href="https://s.id/CekProduk-Namakecil" target="_blank" rel="noreferrer" class="btn-card-cta">
-              ⚡ Coba Aplikasi
-            </a>
+            <div class="product-body">
+              <p class="product-desc">Template perencanaan budget dan persiapan bayi untuk mencatat kebutuhan kehamilan,
+                mengontrol pengeluaran, serta memantau persiapan menuju persalinan dalam satu tempat yang rapi.</p>
+              <div class="features-list">
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Dashboard budget, usia kehamilan, HPL, jadwal kontrol &amp; progres</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Pencatatan rencana dan realisasi pengeluaran kehamilan</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Wishlist kebutuhan ibu dan bayi serta checklist setiap trimester</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Catatan kunjungan medis, hospital bag, nama bayi &amp; rumah sakit</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Format praktis, mudah diedit di Google Sheets</span></div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div class="price-row">
+                <div>
+                  <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
+                  <div class="price-main">Rp55.000 <span class="price-original">Rp250.000</span></div>
+                </div>
+                <span class="access-badge">Akses Selamanya</span>
+              </div>
+              <a href="https://baby-budget-plan-179019585137.asia-southeast1.run.app/" target="_blank" rel="noreferrer"
+                class="btn-card-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15,3 21,3 21,9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                Coba Aplikasi
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- OrtuPedia -->
-        <div class="product-card" data-search="ortupedia edukasi aplikasi tumbuh kembang panduan balita">
-          <div class="product-cover cover-lavender">
-            <div class="cover-top">
-              <span class="cover-badge">🧠 Web App</span>
-              <div class="cover-stars">
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <!-- Nama Kecil -->
+          <div class="product-card" data-search="nama kecil nama bayi aplikasi">
+            <div class="product-cover cover-cream">
+              <div class="cover-top">
+                <span class="cover-badge">📱 Web App</span>
+                <div class="cover-stars">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                </div>
               </div>
-            </div>
-            <div>
-              <div class="cover-eyebrow">Alat Bantu Orangtua</div>
-              <h3 class="cover-title">OrtuPedia</h3>
-            </div>
-          </div>
-          <div class="product-body">
-            <p class="product-desc">Panduan praktis Moms &amp; Dads dari masa kehamilan hingga balita. Cek perkembangan, asupan gizi, persiapan, serta tips stimulasi harian berdasarkan fase tumbuh kembang anak.</p>
-            <div class="features-list">
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Panduan ringkas &amp; fokus utama di setiap fase</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Detail apa yang perlu dilakukan &amp; dipersiapkan</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Rekomendasi nutrisi harian serta pantangan</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Kapan harus konsultasi medis &amp; doa kekuatan</span></div>
-            </div>
-          </div>
-          <div class="product-footer">
-            <div class="price-row">
               <div>
-                <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
-                <div class="price-main">Rp24.000 <span class="price-original">Rp100.000</span></div>
+                <div class="cover-eyebrow">Alat Bantu Orangtua</div>
+                <h3 class="cover-title">Nama Kecil</h3>
               </div>
-              <span class="access-badge">Akses Selamanya</span>
             </div>
-            <a href="https://s.id/CekProduk-Ortupedia" target="_blank" rel="noreferrer" class="btn-card-cta">
-              ⚡ Coba Aplikasi
-            </a>
+            <div class="product-body">
+              <p class="product-desc">Aplikasi pencari nama bayi yang membantu Moms &amp; Dads menemukan inspirasi nama
+                anak berdasarkan arti, asal bahasa, gender, awalan huruf, dan kombinasi nama.</p>
+              <div class="features-list">
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Database 5.000+ pilihan nama bayi bermakna indah</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Filter pencarian berdasarkan gender &amp; awalan huruf</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Penyaringan berdasarkan asal bahasa (Arab, Jawa, Sanskerta, Modern, dll.)</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Fitur favorit &amp; voting bersama pasangan</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Akses praktis lewat browser HP atau notebook</span></div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div class="price-row">
+                <div>
+                  <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
+                  <div class="price-main">Rp15.000 <span class="price-original">Rp50.000</span></div>
+                </div>
+                <span class="access-badge">Akses Selamanya</span>
+              </div>
+              <a href="https://s.id/CekProduk-Namakecil" target="_blank" rel="noreferrer" class="btn-card-cta">
+                ⚡ Coba Aplikasi
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- CeritaKecil -->
-        <div class="product-card" data-search="ceritakecil dongeng aplikasi kisah anak bedtime">
-          <div class="product-cover cover-rose">
-            <div class="cover-top">
-              <span class="cover-badge">🌙 Bedtime App</span>
-              <div class="cover-stars">
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <!-- OrtuPedia -->
+          <div class="product-card" data-search="ortupedia edukasi aplikasi tumbuh kembang panduan balita">
+            <div class="product-cover cover-lavender">
+              <div class="cover-top">
+                <span class="cover-badge">🧠 Web App</span>
+                <div class="cover-stars">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                </div>
               </div>
-            </div>
-            <div>
-              <div class="cover-eyebrow">Alat Bantu Orangtua</div>
-              <h3 class="cover-title">CeritaKecil</h3>
-            </div>
-          </div>
-          <div class="product-body">
-            <p class="product-desc">Panduan mendongeng, membisikkan ucapan hangat, dan ide bermain interaktif untuk si Kecil dari masa kandungan hingga balita. Solusi praktis membangun ikatan erat.</p>
-            <div class="features-list">
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Koleksi dongeng pendek interaktif (kandungan hingga usia 5 tahun)</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Inspirasi ucapan hangat, doa, &amp; afirmasi harian (pagi &amp; malam)</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Panduan ide bermain kreatif sesuai rentang usia anak</span></div>
-              <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg><span>Mempermudah komunikasi aktif Moms &amp; Dads sejak dini</span></div>
-            </div>
-          </div>
-          <div class="product-footer">
-            <div class="price-row">
               <div>
-                <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
-                <div class="price-main">Rp25.000 <span class="price-original">Rp105.000</span></div>
+                <div class="cover-eyebrow">Alat Bantu Orangtua</div>
+                <h3 class="cover-title">OrtuPedia</h3>
               </div>
-              <span class="access-badge">Akses Selamanya</span>
             </div>
-            <a href="https://s.id/CekProduk-Ceritakecil" target="_blank" rel="noreferrer" class="btn-card-cta">
-              ⚡ Coba Aplikasi
-            </a>
-          </div>
-        </div>
-
-      </div><!-- /products-grid -->
-      <div class="empty-state hidden" id="empty-digital">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <h3>Produk Tidak Ditemukan</h3>
-        <button class="empty-reset" onclick="clearSearch()">Reset Pencarian</button>
-      </div>
-    </div><!-- /tab-digital -->
-
-    <!-- RECOMMENDATIONS TAB -->
-    <div id="tab-rekomendasi" class="tab-panel">
-      <div class="rec-grid" id="rec-grid">
-
-        <div class="rec-card" data-search="cot sheet perlak karet newborn perlengkapan tidur harian">
-          <span class="rec-number-bg">01</span>
-          <div class="rec-num-avatar">01</div>
-          <div class="rec-content">
-            <h3 class="rec-title">Cot Sheet / Perlak Karet</h3>
-            <p class="rec-desc">Perlengkapan praktis untuk membantu menjaga area tidur bayi tetap lebih bersih dan nyaman.</p>
-            <div style="display:flex; flex-wrap:wrap; gap:4px; margin-bottom:12px;">
-              <span style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Newborn</span>
-              <span style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Perlengkapan Tidur</span>
-              <span style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Perlengkapan Harian</span>
+            <div class="product-body">
+              <p class="product-desc">Panduan praktis Moms &amp; Dads dari masa kehamilan hingga balita. Cek
+                perkembangan, asupan gizi, persiapan, serta tips stimulasi harian berdasarkan fase tumbuh kembang anak.
+              </p>
+              <div class="features-list">
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Panduan ringkas &amp; fokus utama di setiap fase</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Detail apa yang perlu dilakukan &amp; dipersiapkan</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Rekomendasi nutrisi harian serta pantangan</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Kapan harus konsultasi medis &amp; doa kekuatan</span></div>
+              </div>
             </div>
-            <a href="https://s.shopee.co.id/40dgyxA38d" target="_blank" rel="noreferrer" class="rec-link">
-              🛍️ Beli Produk Ternyaman
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="rec-card" data-search="kimono bedong newborn pakaian bayi baju">
-          <span class="rec-number-bg">02</span>
-          <div class="rec-num-avatar">02</div>
-          <div class="rec-content">
-            <h3 class="rec-title">Kimono Bedong</h3>
-            <p class="rec-desc">Pilihan pakaian bayi yang nyaman untuk newborn dan memudahkan Moms saat mengganti baju.</p>
-            <div style="display:flex; flex-wrap:wrap; gap:4px; margin-bottom:12px;">
-              <span style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Newborn</span>
-              <span style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Pakaian Bayi</span>
+            <div class="product-footer">
+              <div class="price-row">
+                <div>
+                  <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
+                  <div class="price-main">Rp24.000 <span class="price-original">Rp100.000</span></div>
+                </div>
+                <span class="access-badge">Akses Selamanya</span>
+              </div>
+              <a href="https://s.id/CekProduk-Ortupedia" target="_blank" rel="noreferrer" class="btn-card-cta">
+                ⚡ Coba Aplikasi
+              </a>
             </div>
-            <a href="https://s.shopee.co.id/7pqPY6Ifu0" target="_blank" rel="noreferrer" class="rec-link">
-              🛍️ Beli Produk Ternyaman
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
           </div>
-        </div>
 
-      </div><!-- /rec-grid -->
-      <div class="empty-state hidden" id="empty-rec">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <h3>Rekomendasi Tidak Ditemukan</h3>
-        <button class="empty-reset" onclick="clearSearch()">Reset Filter</button>
+          <!-- CeritaKecil -->
+          <div class="product-card" data-search="ceritakecil dongeng aplikasi kisah anak bedtime">
+            <div class="product-cover cover-rose">
+              <div class="cover-top">
+                <span class="cover-badge">🌙 Bedtime App</span>
+                <div class="cover-stars">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div class="cover-eyebrow">Alat Bantu Orangtua</div>
+                <h3 class="cover-title">CeritaKecil</h3>
+              </div>
+            </div>
+            <div class="product-body">
+              <p class="product-desc">Panduan mendongeng, membisikkan ucapan hangat, dan ide bermain interaktif untuk si
+                Kecil dari masa kandungan hingga balita. Solusi praktis membangun ikatan erat.</p>
+              <div class="features-list">
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Koleksi dongeng pendek interaktif (kandungan hingga usia 5 tahun)</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Inspirasi ucapan hangat, doa, &amp; afirmasi harian (pagi &amp; malam)</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Panduan ide bermain kreatif sesuai rentang usia anak</span></div>
+                <div class="feature-item"><svg class="feature-check" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20,6 9,17 4,12" />
+                  </svg><span>Mempermudah komunikasi aktif Moms &amp; Dads sejak dini</span></div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div class="price-row">
+                <div>
+                  <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
+                  <div class="price-main">Rp25.000 <span class="price-original">Rp105.000</span></div>
+                </div>
+                <span class="access-badge">Akses Selamanya</span>
+              </div>
+              <a href="https://s.id/CekProduk-Ceritakecil" target="_blank" rel="noreferrer" class="btn-card-cta">
+                ⚡ Coba Aplikasi
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /products-grid -->
+        <div class="empty-state hidden" id="empty-digital">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <h3>Produk Tidak Ditemukan</h3>
+          <button class="empty-reset" onclick="clearSearch()">Reset Pencarian</button>
+        </div>
+      </div><!-- /tab-digital -->
+
+      <!-- RECOMMENDATIONS TAB -->
+      <div id="tab-rekomendasi" class="tab-panel">
+        <div class="rec-grid" id="rec-grid">
+
+          <div class="rec-card" data-search="cot sheet perlak karet newborn perlengkapan tidur harian">
+            <span class="rec-number-bg">01</span>
+            <div class="rec-num-avatar">01</div>
+            <div class="rec-content">
+              <h3 class="rec-title">Cot Sheet / Perlak Karet</h3>
+              <p class="rec-desc">Perlengkapan praktis untuk membantu menjaga area tidur bayi tetap lebih bersih dan
+                nyaman.</p>
+              <div style="display:flex; flex-wrap:wrap; gap:4px; margin-bottom:12px;">
+                <span
+                  style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Newborn</span>
+                <span
+                  style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Perlengkapan
+                  Tidur</span>
+                <span
+                  style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Perlengkapan
+                  Harian</span>
+              </div>
+              <a href="https://s.shopee.co.id/40dgyxA38d" target="_blank" rel="noreferrer" class="rec-link">
+                🛍️ Beli Produk Ternyaman
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15,3 21,3 21,9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="rec-card" data-search="kimono bedong newborn pakaian bayi baju">
+            <span class="rec-number-bg">02</span>
+            <div class="rec-num-avatar">02</div>
+            <div class="rec-content">
+              <h3 class="rec-title">Kimono Bedong</h3>
+              <p class="rec-desc">Pilihan pakaian bayi yang nyaman untuk newborn dan memudahkan Moms saat mengganti
+                baju.</p>
+              <div style="display:flex; flex-wrap:wrap; gap:4px; margin-bottom:12px;">
+                <span
+                  style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Newborn</span>
+                <span
+                  style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Pakaian
+                  Bayi</span>
+              </div>
+              <a href="https://s.shopee.co.id/7pqPY6Ifu0" target="_blank" rel="noreferrer" class="rec-link">
+                🛍️ Beli Produk Ternyaman
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15,3 21,3 21,9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /rec-grid -->
+        <div class="empty-state hidden" id="empty-rec">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <h3>Rekomendasi Tidak Ditemukan</h3>
+          <button class="empty-reset" onclick="clearSearch()">Reset Filter</button>
+        </div>
+      </div><!-- /tab-rekomendasi -->
+
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!--  CTA BANNER                           -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="cta-banner">
+    <div class="cta-inner">
+      <div class="cta-tag">
+        <svg viewBox="0 0 24 24" width="14" height="14">
+          <path
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            fill="currentColor" />
+        </svg>
+        Moms &amp; Dads Community
       </div>
-    </div><!-- /tab-rekomendasi -->
-
-  </div>
-</section>
-
-<!-- ╔══════════════════════════════════════╗ -->
-<!--  CTA BANNER                           -->
-<!-- ╚══════════════════════════════════════╝ -->
-<section id="cta-banner">
-  <div class="cta-inner">
-    <div class="cta-tag">
-      <svg viewBox="0 0 24 24" width="14" height="14"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" fill="currentColor"/></svg>
-      Moms &amp; Dads Community
-    </div>
-    <h3 class="cta-quote">&ldquo;Mulai pelan-pelan, yang penting Moms &amp; Dads tidak sendirian.&rdquo;</h3>
-    <p class="cta-sub">Pilih produk yang paling sesuai dengan fase parenting saat ini. Kalau masih bingung, bisa langsung chat admin Teman Parenting kapan saja.</p>
-    <a href="https://wa.me/6285111324256?text=Halo%20admin%20Teman%20Parenting%2C%20aku%20ingin%20tanya%20produk%20Teman%20Parenting" target="_blank" rel="noreferrer" class="btn-primary" style="font-size:0.9rem; padding:14px 32px;">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Chat Admin Teman Parenting
-    </a>
-  </div>
-</section>
-
-<!-- ╔══════════════════════════════════════╗ -->
-<!--  SOCIAL SECTION                       -->
-<!-- ╚══════════════════════════════════════╝ -->
-<section id="sosial">
-  <div class="section-inner">
-    <div class="section-header-center" style="margin-bottom:40px;">
-      <h2 class="section-heading">Ikuti Teman Parenting</h2>
-      <p class="section-sub" style="max-width:480px;">Dapatkan update konten, produk digital, dan rekomendasi parenting terbaru dari Teman Parenting.</p>
-    </div>
-
-    <div class="socials-grid">
-      <a href="https://www.instagram.com/teman_parenting.id?igsh=eTM4Y2p4djV6NnBl" target="_blank" rel="noreferrer" class="social-card">
-        <div class="social-icon ig">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </div>
-        <span class="social-label">Instagram</span>
-        <span class="social-sublabel">Instagram</span>
-      </a>
-      <a href="https://www.tiktok.com/@temanparenting.id?_r=1&_t=ZS-913duYl2Ee0" target="_blank" rel="noreferrer" class="social-card">
-        <div class="social-icon tiktok">
-          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9a8.27 8.27 0 004.84 1.55V7.12a4.85 4.85 0 01-1.07-.43z"/></svg>
-        </div>
-        <span class="social-label">TikTok</span>
-        <span class="social-sublabel">TikTok</span>
-      </a>
-      <a href="https://www.youtube.com/@temanparenting" target="_blank" rel="noreferrer" class="social-card">
-        <div class="social-icon youtube">
-          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="#DC2626"/></svg>
-        </div>
-        <span class="social-label">YouTube</span>
-        <span class="social-sublabel">YouTube</span>
-      </a>
-      <a href="https://whatsapp.com/channel/0029VbBCMCA0VycLABCJno2p" target="_blank" rel="noreferrer" class="social-card">
-        <div class="social-icon wa-channel">
-          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.07-1.35A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.93 14.04c-.21.59-1.22 1.12-1.67 1.19-.43.06-.97.09-1.57-.1-.36-.11-.82-.27-1.41-.53-2.46-1.06-4.06-3.53-4.19-3.69-.12-.17-.99-1.32-.99-2.52 0-1.2.63-1.79.85-2.03.22-.24.49-.3.65-.3l.47.01c.15.01.35-.06.55.42l.75 1.87c.06.15.03.32-.04.45l-.37.51c-.07.1-.14.2-.06.39.09.19.4.66.86 1.06.59.52 1.09.69 1.24.76.15.07.24.06.33-.04l.48-.57c.1-.12.2-.15.33-.09l2.04 1.02c.15.08.25.12.28.19.04.07.04.39-.17.98z"/></svg>
-        </div>
-        <span class="social-label">Channel WA</span>
-        <span class="social-sublabel">Channel WA</span>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61581943449744" target="_blank" rel="noreferrer" class="social-card">
-        <div class="social-icon facebook">
-          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-        </div>
-        <span class="social-label">Facebook</span>
-        <span class="social-sublabel">Facebook</span>
-      </a>
-      <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer" class="social-card">
-        <div class="social-icon chat-admin">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <span class="social-label">Chat Admin</span>
-        <span class="social-sublabel">Chat Admin</span>
+      <h3 class="cta-quote">&ldquo;Mulai pelan-pelan, yang penting Moms &amp; Dads tidak sendirian.&rdquo;</h3>
+      <p class="cta-sub">Pilih produk yang paling sesuai dengan fase parenting saat ini. Kalau masih bingung, bisa
+        langsung chat admin Teman Parenting kapan saja.</p>
+      <a href="https://wa.me/6285111324256?text=Halo%20admin%20Teman%20Parenting%2C%20aku%20ingin%20tanya%20produk%20Teman%20Parenting"
+        target="_blank" rel="noreferrer" class="btn-primary" style="font-size:0.9rem; padding:14px 32px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+        Chat Admin Teman Parenting
       </a>
     </div>
+  </section>
 
-    <div class="community-box">
-      <span class="community-emoji">👋</span>
-      <h4 class="community-title">Punya Pertanyaan Khusus?</h4>
-      <p class="community-sub">Kalau Moms &amp; Dads masih kebingungan memilih produk digital atau ingin tanya-tanya seputar parenting, tim kami siap menyambut pertanyaan Anda di WhatsApp.</p>
-      <a href="https://wa.me/6285111324256?text=Halo%20admin%20Teman%20Parenting%2C%20aku%20ingin%20tanya%20produk%20Teman%20Parenting" target="_blank" rel="noreferrer" class="btn-primary" style="font-size:0.8rem;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Tanya Admin via Chat
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ╔══════════════════════════════════════╗ -->
-<!--  FOOTER                               -->
-<!-- ╚══════════════════════════════════════╝ -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">
-          <img src="https://lh3.googleusercontent.com/d/1NDEifhlfHjjY2yZLBeVe70RscWh57ByQ"
-            class="footer-logo-img" alt="Logo Teman Parenting"
-            referrerpolicy="no-referrer"
-            onerror="this.style.display='none';" />
-          <span class="footer-brand-name">Teman Parenting</span>
-        </div>
-        <p class="footer-quote">&ldquo;Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan, hingga anak tumbuh remaja.&rdquo;</p>
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!--  SOCIAL SECTION                       -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="sosial">
+    <div class="section-inner">
+      <div class="section-header-center" style="margin-bottom:40px;">
+        <h2 class="section-heading">Ikuti Teman Parenting</h2>
+        <p class="section-sub" style="max-width:480px;">Dapatkan update konten, produk digital, dan rekomendasi
+          parenting terbaru dari Teman Parenting.</p>
       </div>
-      <div class="footer-right">
-        <nav class="footer-links">
-          <a href="#beranda">Beranda</a>
-          <a href="#produk">Produk Digital</a>
-          <a href="#rekomendasi">Produk Rekomendasi</a>
-          <a href="#sosial">Sosial Media</a>
-        </nav>
-        <p class="footer-contact">
-          Butuh bantuan pemesanan? Chat ke <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer">+62 851-1132-4256</a>
-        </p>
+
+      <div class="socials-grid">
+        <a href="https://www.instagram.com/teman_parenting.id?igsh=eTM4Y2p4djV6NnBl" target="_blank" rel="noreferrer"
+          class="social-card">
+          <div class="social-icon ig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <span class="social-label">Instagram</span>
+          <span class="social-sublabel">Instagram</span>
+        </a>
+        <a href="https://www.tiktok.com/@temanparenting.id?_r=1&_t=ZS-913duYl2Ee0" target="_blank" rel="noreferrer"
+          class="social-card">
+          <div class="social-icon tiktok">
+            <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9a8.27 8.27 0 004.84 1.55V7.12a4.85 4.85 0 01-1.07-.43z" />
+            </svg>
+          </div>
+          <span class="social-label">TikTok</span>
+          <span class="social-sublabel">TikTok</span>
+        </a>
+        <a href="https://www.youtube.com/@temanparenting" target="_blank" rel="noreferrer" class="social-card">
+          <div class="social-icon youtube">
+            <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
+              <polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="#DC2626" />
+            </svg>
+          </div>
+          <span class="social-label">YouTube</span>
+          <span class="social-sublabel">YouTube</span>
+        </a>
+        <a href="https://whatsapp.com/channel/0029VbBCMCA0VycLABCJno2p" target="_blank" rel="noreferrer"
+          class="social-card">
+          <div class="social-icon wa-channel">
+            <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.07-1.35A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.93 14.04c-.21.59-1.22 1.12-1.67 1.19-.43.06-.97.09-1.57-.1-.36-.11-.82-.27-1.41-.53-2.46-1.06-4.06-3.53-4.19-3.69-.12-.17-.99-1.32-.99-2.52 0-1.2.63-1.79.85-2.03.22-.24.49-.3.65-.3l.47.01c.15.01.35-.06.55.42l.75 1.87c.06.15.03.32-.04.45l-.37.51c-.07.1-.14.2-.06.39.09.19.4.66.86 1.06.59.52 1.09.69 1.24.76.15.07.24.06.33-.04l.48-.57c.1-.12.2-.15.33-.09l2.04 1.02c.15.08.25.12.28.19.04.07.04.39-.17.98z" />
+            </svg>
+          </div>
+          <span class="social-label">Channel WA</span>
+          <span class="social-sublabel">Channel WA</span>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61581943449744" target="_blank" rel="noreferrer"
+          class="social-card">
+          <div class="social-icon facebook">
+            <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
+          </div>
+          <span class="social-label">Facebook</span>
+          <span class="social-sublabel">Facebook</span>
+        </a>
+        <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer" class="social-card">
+          <div class="social-icon chat-admin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <span class="social-label">Chat Admin</span>
+          <span class="social-sublabel">Chat Admin</span>
+        </a>
+      </div>
+
+      <div class="community-box">
+        <span class="community-emoji">👋</span>
+        <h4 class="community-title">Punya Pertanyaan Khusus?</h4>
+        <p class="community-sub">Kalau Moms &amp; Dads masih kebingungan memilih produk digital atau ingin tanya-tanya
+          seputar parenting, tim kami siap menyambut pertanyaan Anda di WhatsApp.</p>
+        <a href="https://wa.me/6285111324256?text=Halo%20admin%20Teman%20Parenting%2C%20aku%20ingin%20tanya%20produk%20Teman%20Parenting"
+          target="_blank" rel="noreferrer" class="btn-primary" style="font-size:0.8rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Tanya Admin via Chat
+        </a>
       </div>
     </div>
-    <div class="disclaimer">
-      <span class="disclaimer-label">Catatan Penting</span>
-      <p class="disclaimer-text">Konten Teman Parenting bersifat edukatif dan tidak menggantikan konsultasi dengan dokter, bidan, psikolog, ahli gizi, atau profesional medis terkait lainnya. Selalu konsultasikan kondisi kesehatan Anda dan si kecil dengan ahlinya.</p>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!--  FOOTER                               -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="https://lh3.googleusercontent.com/d/1NDEifhlfHjjY2yZLBeVe70RscWh57ByQ" class="footer-logo-img"
+              alt="Logo Teman Parenting" referrerpolicy="no-referrer" onerror="this.style.display='none';" />
+            <span class="footer-brand-name">Teman Parenting</span>
+          </div>
+          <p class="footer-quote">&ldquo;Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan,
+            hingga anak tumbuh remaja.&rdquo;</p>
+        </div>
+        <div class="footer-right">
+          <nav class="footer-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#produk">Produk Digital</a>
+            <a href="#rekomendasi">Produk Rekomendasi</a>
+            <a href="#sosial">Sosial Media</a>
+          </nav>
+          <p class="footer-contact">
+            Butuh bantuan pemesanan? Chat ke <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer">+62
+              851-1132-4256</a>
+          </p>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <span class="disclaimer-label">Catatan Penting</span>
+        <p class="disclaimer-text">Konten Teman Parenting bersifat edukatif dan tidak menggantikan konsultasi dengan
+          dokter, bidan, psikolog, ahli gizi, atau profesional medis terkait lainnya. Selalu konsultasikan kondisi
+          kesehatan Anda dan si kecil dengan ahlinya.</p>
+      </div>
+      <p class="copyright">&copy; 2026 Teman Parenting. All rights reserved.</p>
     </div>
-    <p class="copyright">&copy; 2026 Teman Parenting. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  // ── Header scroll effect ───────────────────────────────────
-  const header = document.getElementById('main-header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 10);
-  }, { passive: true });
+  <script>
+    // ── Header scroll effect ───────────────────────────────────
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
 
-  // ── Hamburger menu ─────────────────────────────────────────
-  const hamburger = document.getElementById('hamburger-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const iconMenu = document.getElementById('icon-menu');
-  const iconClose = document.getElementById('icon-close');
-  hamburger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    iconMenu.style.display = open ? 'none' : 'block';
-    iconClose.style.display = open ? 'block' : 'none';
-  });
-  document.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      iconMenu.style.display = 'block';
-      iconClose.style.display = 'none';
+    // ── Hamburger menu ─────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      iconMenu.style.display = open ? 'none' : 'block';
+      iconClose.style.display = open ? 'block' : 'none';
     });
-  });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        iconMenu.style.display = 'block';
+        iconClose.style.display = 'none';
+      });
+    });
 
-  // ── Tab switching ──────────────────────────────────────────
-  let currentTab = 'digital';
-  function switchTab(tab) {
-    currentTab = tab;
-    document.getElementById('tab-digital').classList.toggle('active', tab === 'digital');
-    document.getElementById('tab-rekomendasi').classList.toggle('active', tab === 'rekomendasi');
-    document.getElementById('btn-digital').classList.toggle('active', tab === 'digital');
-    document.getElementById('btn-rekomendasi').classList.toggle('active', tab === 'rekomendasi');
-    const input = document.getElementById('search-input');
-    input.placeholder = tab === 'digital'
-      ? 'Cari solusi kalkulator & nama...'
-      : 'Cari merek bedong, perlak, dll...';
-    clearSearch();
-    // update hash
-    history.pushState(null, '', tab === 'digital' ? '#produk' : '#rekomendasi');
-  }
-
-  // ── Search ─────────────────────────────────────────────────
-  function onSearch() {
-    const q = document.getElementById('search-input').value.trim().toLowerCase();
-    document.getElementById('search-reset').style.display = q ? 'block' : 'none';
-    if (currentTab === 'digital') {
-      filterCards('products-grid', q, 'empty-digital');
-    } else {
-      filterCards('rec-grid', q, 'empty-rec');
+    // ── Tab switching ──────────────────────────────────────────
+    let currentTab = 'digital';
+    function switchTab(tab) {
+      currentTab = tab;
+      document.getElementById('tab-digital').classList.toggle('active', tab === 'digital');
+      document.getElementById('tab-rekomendasi').classList.toggle('active', tab === 'rekomendasi');
+      document.getElementById('btn-digital').classList.toggle('active', tab === 'digital');
+      document.getElementById('btn-rekomendasi').classList.toggle('active', tab === 'rekomendasi');
+      const input = document.getElementById('search-input');
+      input.placeholder = tab === 'digital'
+        ? 'Cari solusi kalkulator & nama...'
+        : 'Cari merek bedong, perlak, dll...';
+      clearSearch();
+      // update hash
+      history.pushState(null, '', tab === 'digital' ? '#produk' : '#rekomendasi');
     }
-  }
-  function filterCards(gridId, q, emptyId) {
-    const grid = document.getElementById(gridId);
-    const empty = document.getElementById(emptyId);
-    let visible = 0;
-    grid.querySelectorAll('[data-search]').forEach(card => {
-      const match = !q || card.dataset.search.includes(q) ||
-        card.textContent.toLowerCase().includes(q);
-      card.style.display = match ? '' : 'none';
-      if (match) visible++;
-    });
-    grid.style.display = visible ? '' : 'none';
-    empty.classList.toggle('hidden', visible > 0);
-  }
-  function clearSearch() {
-    const input = document.getElementById('search-input');
-    input.value = '';
-    document.getElementById('search-reset').style.display = 'none';
-    ['products-grid','rec-grid'].forEach(id => {
-      const grid = document.getElementById(id);
-      grid.querySelectorAll('[data-search]').forEach(c => c.style.display = '');
-      grid.style.display = '';
-    });
-    document.getElementById('empty-digital').classList.add('hidden');
-    document.getElementById('empty-rec').classList.add('hidden');
-  }
 
-  // ── Hash-based tab selection on load ───────────────────────
-  (function() {
-    const h = window.location.hash;
-    if (h === '#rekomendasi') switchTab('rekomendasi');
-  })();
-
-  // ── Smooth scroll for anchor links ─────────────────────────
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // ── Search ─────────────────────────────────────────────────
+    function onSearch() {
+      const q = document.getElementById('search-input').value.trim().toLowerCase();
+      document.getElementById('search-reset').style.display = q ? 'block' : 'none';
+      if (currentTab === 'digital') {
+        filterCards('products-grid', q, 'empty-digital');
+      } else {
+        filterCards('rec-grid', q, 'empty-rec');
       }
+    }
+    function filterCards(gridId, q, emptyId) {
+      const grid = document.getElementById(gridId);
+      const empty = document.getElementById(emptyId);
+      let visible = 0;
+      grid.querySelectorAll('[data-search]').forEach(card => {
+        const match = !q || card.dataset.search.includes(q) ||
+          card.textContent.toLowerCase().includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      grid.style.display = visible ? '' : 'none';
+      empty.classList.toggle('hidden', visible > 0);
+    }
+    function clearSearch() {
+      const input = document.getElementById('search-input');
+      input.value = '';
+      document.getElementById('search-reset').style.display = 'none';
+      ['products-grid', 'rec-grid'].forEach(id => {
+        const grid = document.getElementById(id);
+        grid.querySelectorAll('[data-search]').forEach(c => c.style.display = '');
+        grid.style.display = '';
+      });
+      document.getElementById('empty-digital').classList.add('hidden');
+      document.getElementById('empty-rec').classList.add('hidden');
+    }
+
+    // ── Hash-based tab selection on load ───────────────────────
+    (function () {
+      const h = window.location.hash;
+      if (h === '#rekomendasi') switchTab('rekomendasi');
+    })();
+
+    // ── Smooth scroll for anchor links ─────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
+
 </html>
