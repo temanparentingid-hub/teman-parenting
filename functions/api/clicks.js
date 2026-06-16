@@ -1,9 +1,9 @@
 // In-memory fallback for local development if KV is not bound
 const memoryDb = {
-  "baby-budget-plan": 10,
-  "nama-kecil": 10,
-  "ortupedia": 10,
-  "ceritakecil": 10
+  "baby-budget-plan": 0,
+  "nama-kecil": 0,
+  "ortupedia": 0,
+  "ceritakecil": 0
 };
 
 export async function onRequestGet(context) {
@@ -14,7 +14,7 @@ export async function onRequestGet(context) {
   for (const prod of products) {
     if (env.CLICKS_KV) {
       const val = await env.CLICKS_KV.get(prod);
-      data[prod] = val !== null ? parseInt(val, 10) : 10;
+      data[prod] = val !== null ? parseInt(val, 10) : 0;
     } else {
       data[prod] = memoryDb[prod];
     }
@@ -49,14 +49,14 @@ export async function onRequestPost(context) {
     });
   }
 
-  let newCount = 10;
+  let newCount = 0;
   if (env.CLICKS_KV) {
     const val = await env.CLICKS_KV.get(product);
-    const current = val !== null ? parseInt(val, 10) : 10;
+    const current = val !== null ? parseInt(val, 10) : 0;
     newCount = current + 1;
     await env.CLICKS_KV.put(product, newCount.toString());
   } else {
-    memoryDb[product] = (memoryDb[product] || 10) + 1;
+    memoryDb[product] = (memoryDb[product] || 0) + 1;
     newCount = memoryDb[product];
   }
 
