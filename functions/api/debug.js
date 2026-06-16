@@ -1,3 +1,4 @@
+// Trigger redeploy after binding CLICKS_KV in Pages Settings
 export async function onRequestGet(context) {
   const { env } = context;
   const keys = Object.keys(env);
