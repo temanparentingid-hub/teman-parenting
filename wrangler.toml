@@ -1,6 +1,0 @@
-name = "teman-parenting"
-main = "entrypoint.js"
-compatibility_date = "2026-06-16"
-
-[assets]
-directory = "."
