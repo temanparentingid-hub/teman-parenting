@@ -1105,6 +1105,28 @@
       letter-spacing: 0.05em;
     }
 
+    .user-try-count {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      background: #F0FDFA;
+      border: 1px solid #CCFBF1;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #0F766E;
+    }
+
+    .user-try-count strong {
+      color: #0D9488;
+      font-weight: 900;
+      font-size: 0.85rem;
+      font-family: 'Quicksand', sans-serif;
+    }
+
     .btn-card-cta {
       display: flex;
       align-items: center;
@@ -1860,15 +1882,15 @@
               </div>
             </div>
             <div class="product-footer">
-              <div class="price-row">
-                <div>
-                  <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
-                  <div class="price-main">Rp55.000 <span class="price-original">Rp250.000</span></div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <div class="user-try-count" style="margin-bottom: 0;">
+                  <span>👥</span>
+                  <span><strong id="count-baby-budget-plan">10</strong> Pengguna Mencoba</span>
                 </div>
                 <span class="access-badge">Akses Selamanya</span>
               </div>
               <a href="https://baby-budget-plan-179019585137.asia-southeast1.run.app/" target="_blank" rel="noreferrer"
-                class="btn-card-cta">
+                class="btn-card-cta" onclick="trackClick('baby-budget-plan')">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
                   <polyline points="15,3 21,3 21,9" />
@@ -1934,21 +1956,21 @@
               </div>
             </div>
             <div class="product-footer">
-              <!--
-              <div class="price-row">
-                <div>
-                  <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
-                  <div class="price-main">Rp15.000 <span class="price-original">Rp50.000</span></div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <div class="user-try-count" style="margin-bottom: 0;">
+                  <span>👥</span>
+                  <span><strong id="count-nama-kecil">10</strong> Pengguna Mencoba</span>
                 </div>
                 <span class="access-badge">Akses Selamanya</span>
               </div>
-              <a href="https://s.id/CekProduk-Namakecil" target="_blank" rel="noreferrer" class="btn-card-cta">
-                ⚡ Coba Aplikasi
+              <a href="https://namakecil.my.id/" target="_blank" rel="noreferrer" class="btn-card-cta" onclick="trackClick('nama-kecil')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15,3 21,3 21,9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                Coba Aplikasi
               </a>
-              -->
-              <button class="btn-card-cta" disabled style="background: var(--gray-400); cursor: not-allowed;">
-                Coming Soon
-              </button>
             </div>
           </div>
 
@@ -2004,21 +2026,21 @@
               </div>
             </div>
             <div class="product-footer">
-              <!--
-              <div class="price-row">
-                <div>
-                  <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
-                  <div class="price-main">Rp24.000 <span class="price-original">Rp100.000</span></div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <div class="user-try-count" style="margin-bottom: 0;">
+                  <span>👥</span>
+                  <span><strong id="count-ortupedia">10</strong> Pengguna Mencoba</span>
                 </div>
                 <span class="access-badge">Akses Selamanya</span>
               </div>
-              <a href="https://s.id/CekProduk-Ortupedia" target="_blank" rel="noreferrer" class="btn-card-cta">
-                ⚡ Coba Aplikasi
+              <a href="https://ortupedia.my.id/" target="_blank" rel="noreferrer" class="btn-card-cta" onclick="trackClick('ortupedia')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15,3 21,3 21,9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                Coba Aplikasi
               </a>
-              -->
-              <button class="btn-card-cta" disabled style="background: var(--gray-400); cursor: not-allowed;">
-                Coming Soon
-              </button>
             </div>
           </div>
 
@@ -2073,21 +2095,21 @@
               </div>
             </div>
             <div class="product-footer">
-              <!--
-              <div class="price-row">
-                <div>
-                  <div class="price-label">Investasi <span class="price-promo">🎯 PROMO TERBATAS</span></div>
-                  <div class="price-main">Rp25.000 <span class="price-original">Rp105.000</span></div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <div class="user-try-count" style="margin-bottom: 0;">
+                  <span>👥</span>
+                  <span><strong id="count-ceritakecil">10</strong> Pengguna Mencoba</span>
                 </div>
                 <span class="access-badge">Akses Selamanya</span>
               </div>
-              <a href="https://s.id/CekProduk-Ceritakecil" target="_blank" rel="noreferrer" class="btn-card-cta">
-                ⚡ Coba Aplikasi
+              <a href="https://critakecil.my.id/" target="_blank" rel="noreferrer" class="btn-card-cta" onclick="trackClick('ceritakecil')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15,3 21,3 21,9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                Coba Aplikasi
               </a>
-              -->
-              <button class="btn-card-cta" disabled style="background: var(--gray-400); cursor: not-allowed;">
-                Coming Soon
-              </button>
             </div>
           </div>
 
@@ -2427,6 +2449,42 @@
         }
       });
     });
+
+    // ── Click tracking and loading ──────────────────────────────
+    async function initClickCounters() {
+      try {
+        const response = await fetch('/api/clicks');
+        if (response.ok) {
+          const data = await response.json();
+          for (const [product, count] of Object.entries(data)) {
+            const el = document.getElementById(`count-${product}`);
+            if (el) el.textContent = count;
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load click counts:', err);
+      }
+    }
+
+    async function trackClick(product) {
+      try {
+        // Optimistic update
+        const el = document.getElementById(`count-${product}`);
+        if (el) {
+          const current = parseInt(el.textContent, 10) || 10;
+          el.textContent = current + 1;
+        }
+        await fetch('/api/clicks', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ product })
+        });
+      } catch (err) {
+        console.error('Failed to track click:', err);
+      }
+    }
+
+    initClickCounters();
   </script>
 </body>
 
