@@ -70,6 +70,22 @@ export default {
       }
     }
 
+    // ── Handle API /api/debug-env ───────────────────────────
+    if (url.pathname === "/api/debug-env") {
+      const keys = Object.keys(env);
+      const hasKV = typeof env.CLICKS_KV !== "undefined";
+      return new Response(JSON.stringify({
+        envKeys: keys,
+        hasClicksKV: hasKV,
+        kvType: hasKV ? typeof env.CLICKS_KV : "undefined"
+      }), {
+        headers: { 
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
+        }
+      });
+    }
+
     // ── Fallback to serving static assets ───────────────────
     if (env.ASSETS) {
       return env.ASSETS.fetch(request);
