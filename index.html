@@ -2749,8 +2749,8 @@
   <!-- ── TikTok External Browser Helper ────────────────────────── -->
   <script>
     (function() {
-      var ua = navigator.userAgent || navigator.vendor || window.opera;
-      var isTikTok = ua.includes("TikTok") || ua.includes("musical_ly");
+      var ua = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
+      var isTikTok = ua.includes("tiktok") || ua.includes("musical_ly");
 
       if (isTikTok) {
         // Inject CSS styles dynamically
