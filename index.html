@@ -2757,7 +2757,7 @@
         alert("UA: " + navigator.userAgent);
       }
 
-      function showTikTokNotice() {
+      function showTikTokNotice(productName) {
         if (document.getElementById('tiktok-escape-overlay')) return;
 
         var overlay = document.createElement('div');
@@ -2774,7 +2774,7 @@
             <img class="tiktok-escape-logo-img" src="https://lh3.googleusercontent.com/d/1NDEifhlfHjjY2yZLBeVe70RscWh57ByQ" alt="Logo Teman Parenting" referrerpolicy="no-referrer" onerror="this.style.display='none';">
             <h3 class="tiktok-escape-title">Gunakan Browser Eksternal</h3>
             <p class="tiktok-escape-desc">
-              Untuk kenyamanan Moms &amp; Dads, silakan klik ikon tiga titik <b>(•••)</b> di pojok kanan atas, lalu pilih <b>"Open in Browser"</b> atau <b>"Buka di Browser"</b> agar seluruh fitur dapat diakses dengan lancar.
+              Untuk kenyamanan Moms &amp; Dads, silakan klik ikon tiga titik <b>(•••)</b> di pojok kanan atas, lalu pilih <b>"Open in Browser"</b> atau <b>"Buka di Browser"</b> agar dapat mengakses <b>${productName}</b> secara lancar.
             </p>
             <button class="tiktok-escape-btn" onclick="document.getElementById('tiktok-escape-overlay').remove()">
               Tetap di Sini
@@ -2907,7 +2907,21 @@
         ctaButtons.forEach(function(btn) {
           btn.addEventListener('click', function(e) {
             e.preventDefault();
-            showTikTokNotice();
+            
+            // Extract product key from onclick attribute
+            var onclickAttr = btn.getAttribute('onclick') || '';
+            var match = onclickAttr.match(/'([^']+)'/);
+            var productKey = match ? match[1] : '';
+            
+            var productNames = {
+              'baby-budget-plan': 'Baby Budget Plan',
+              'nama-kecil': 'Nama Kecil',
+              'ortupedia': 'Ortupedia',
+              'ceritakecil': 'Cerita Kecil'
+            };
+            var displayName = productNames[productKey] || 'Aplikasi';
+            
+            showTikTokNotice(displayName);
           });
         });
       }
