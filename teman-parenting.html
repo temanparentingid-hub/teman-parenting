@@ -2745,6 +2745,162 @@
 
     initClickCounters();
   </script>
+
+  <!-- ── TikTok External Browser Helper ────────────────────────── -->
+  <script>
+    (function() {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      var isTikTok = ua.includes("TikTok") || ua.includes("musical_ly");
+
+      if (isTikTok) {
+        // Inject CSS styles dynamically
+        var style = document.createElement('style');
+        style.innerHTML = `
+          #tiktok-escape-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+            font-family: 'Nunito', 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
+          }
+          .tiktok-escape-card {
+            width: 100%;
+            max-width: 380px;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+            border: 1px solid rgba(20, 184, 184, 0.3);
+            border-radius: 24px;
+            padding: 32px 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-align: center;
+            animation: tiktokSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          }
+          .tiktok-escape-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #14B8B8, #0D9488);
+            color: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 20px rgba(20, 184, 184, 0.3);
+          }
+          .tiktok-escape-title {
+            color: #FFFFFF;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.4;
+          }
+          .tiktok-escape-desc {
+            color: #E2E8F0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+          }
+          .tiktok-escape-desc b {
+            color: #FBBF24;
+            font-weight: 700;
+          }
+          .tiktok-escape-btn {
+            width: 100%;
+            background: transparent;
+            color: #94A3B8;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+          }
+          .tiktok-escape-btn:hover {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+          }
+          .tiktok-escape-guide {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+            color: #14B8B8;
+          }
+          .tiktok-escape-arrow {
+            width: 40px;
+            height: 40px;
+            animation: tiktokBounceArrow 1.2s infinite alternate ease-in-out;
+          }
+          .tiktok-escape-guide-text {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            animation: tiktokFadeText 1.2s infinite alternate ease-in-out;
+          }
+          @keyframes tiktokSlideUp {
+            from {
+              transform: translateY(30px);
+              opacity: 0;
+            }
+            to {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          @keyframes tiktokBounceArrow {
+            0% { transform: translate(-6px, 6px); }
+            100% { transform: translate(4px, -4px); }
+          }
+          @keyframes tiktokFadeText {
+            0% { opacity: 0.4; }
+            100% { opacity: 1; }
+          }
+        `;
+        document.head.appendChild(style);
+
+        // Build and append overlay elements dynamically
+        var overlay = document.createElement('div');
+        overlay.id = 'tiktok-escape-overlay';
+        overlay.innerHTML = `
+          <div class="tiktok-escape-guide">
+            <svg class="tiktok-escape-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+            <span class="tiktok-escape-guide-text">Ketuk Di Sini</span>
+          </div>
+          <div class="tiktok-escape-card">
+            <div class="tiktok-escape-icon">TP</div>
+            <h3 class="tiktok-escape-title">Gunakan Browser Eksternal</h3>
+            <p class="tiktok-escape-desc">
+              Untuk kenyamanan Moms &amp; Dads, silakan klik ikon tiga titik <b>(•••)</b> di pojok kanan atas, lalu pilih <b>"Open in Browser"</b> atau <b>"Buka di Browser"</b> agar seluruh fitur kalkulator dapat diakses dengan lancar.
+            </p>
+            <button class="tiktok-escape-btn" onclick="document.getElementById('tiktok-escape-overlay').remove()">
+              Tetap di Sini
+            </button>
+          </div>
+        `;
+        document.body.appendChild(overlay);
+      }
+    })();
+  </script>
 </body>
 
 </html>
