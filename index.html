@@ -2750,7 +2750,8 @@
   <script>
     (function() {
       var ua = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
-      var isTikTok = ua.includes("tiktok") || ua.includes("musical_ly");
+      var isDebug = window.location.search.indexOf("debug=tiktok") > -1 || window.location.search.indexOf("debug=1") > -1;
+      var isTikTok = ua.indexOf("tiktok") > -1 || ua.indexOf("musical_ly") > -1 || isDebug;
 
       if (isTikTok) {
         // Inject CSS styles dynamically
