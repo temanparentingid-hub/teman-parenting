@@ -2757,6 +2757,33 @@
         alert("UA: " + navigator.userAgent);
       }
 
+      function showTikTokNotice() {
+        if (document.getElementById('tiktok-escape-overlay')) return;
+
+        var overlay = document.createElement('div');
+        overlay.id = 'tiktok-escape-overlay';
+        overlay.innerHTML = `
+          <div class="tiktok-escape-guide">
+            <svg class="tiktok-escape-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+            <span class="tiktok-escape-guide-text">Ketuk Di Sini</span>
+          </div>
+          <div class="tiktok-escape-card">
+            <img class="tiktok-escape-logo-img" src="https://lh3.googleusercontent.com/d/1NDEifhlfHjjY2yZLBeVe70RscWh57ByQ" alt="Logo Teman Parenting" referrerpolicy="no-referrer" onerror="this.style.display='none';">
+            <h3 class="tiktok-escape-title">Gunakan Browser Eksternal</h3>
+            <p class="tiktok-escape-desc">
+              Untuk kenyamanan Moms &amp; Dads, silakan klik ikon tiga titik <b>(•••)</b> di pojok kanan atas, lalu pilih <b>"Open in Browser"</b> atau <b>"Buka di Browser"</b> agar seluruh fitur dapat diakses dengan lancar.
+            </p>
+            <button class="tiktok-escape-btn" onclick="document.getElementById('tiktok-escape-overlay').remove()">
+              Tetap di Sini
+            </button>
+          </div>
+        `;
+        document.body.appendChild(overlay);
+      }
+
       if (isTikTok) {
         // Inject CSS styles dynamically
         var style = document.createElement('style');
@@ -2875,29 +2902,14 @@
         `;
         document.head.appendChild(style);
 
-        // Build and append overlay elements dynamically
-        var overlay = document.createElement('div');
-        overlay.id = 'tiktok-escape-overlay';
-        overlay.innerHTML = `
-          <div class="tiktok-escape-guide">
-            <svg class="tiktok-escape-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-            <span class="tiktok-escape-guide-text">Ketuk Di Sini</span>
-          </div>
-          <div class="tiktok-escape-card">
-            <img class="tiktok-escape-logo-img" src="https://lh3.googleusercontent.com/d/1NDEifhlfHjjY2yZLBeVe70RscWh57ByQ" alt="Logo Teman Parenting" referrerpolicy="no-referrer" onerror="this.style.display='none';">
-            <h3 class="tiktok-escape-title">Gunakan Browser Eksternal</h3>
-            <p class="tiktok-escape-desc">
-              Untuk kenyamanan Moms &amp; Dads, silakan klik ikon tiga titik <b>(•••)</b> di pojok kanan atas, lalu pilih <b>"Open in Browser"</b> atau <b>"Buka di Browser"</b> agar seluruh fitur dapat diakses dengan lancar.
-            </p>
-            <button class="tiktok-escape-btn" onclick="document.getElementById('tiktok-escape-overlay').remove()">
-              Tetap di Sini
-            </button>
-          </div>
-        `;
-        document.body.appendChild(overlay);
+        // Bind escape notice to digital product CTA clicks
+        var ctaButtons = document.querySelectorAll('.btn-card-cta');
+        ctaButtons.forEach(function(btn) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            showTikTokNotice();
+          });
+        });
       }
     })();
   </script>
