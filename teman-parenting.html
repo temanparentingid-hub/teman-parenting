@@ -2751,7 +2751,11 @@
     (function() {
       var ua = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
       var isDebug = window.location.search.indexOf("debug=tiktok") > -1 || window.location.search.indexOf("debug=1") > -1;
-      var isTikTok = ua.indexOf("tiktok") > -1 || ua.indexOf("musical_ly") > -1 || isDebug;
+      var isTikTok = ua.indexOf("tiktok") > -1 || ua.indexOf("musical_ly") > -1 || ua.indexOf("trill") > -1 || ua.indexOf("bytedancewebview") > -1 || isDebug;
+
+      if (window.location.search.indexOf("show_ua=1") > -1) {
+        alert("UA: " + navigator.userAgent);
+      }
 
       if (isTikTok) {
         // Inject CSS styles dynamically
