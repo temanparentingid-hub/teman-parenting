@@ -2,13 +2,45 @@
 <html lang="id">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-72P9FS06QV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-72P9FS06QV');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <title>Teman Parenting — Temani Setiap Langkahmu Menjadi Orang Tua</title>
+  <title>Teman Parenting: Pusat Informasi &amp; Rekomendasi Parenting</title>
   <meta name="description"
-    content="Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan, hingga anak tumbuh remaja." />
+    content="Temani setiap langkahmu menjadi orang tua! Akses aplikasi digital, panduan kehamilan hingga tumbuh kembang anak, dan rekomendasi perlengkapan di Teman Parenting." />
+  <meta name="keywords"
+    content="edukasi parenting, persiapan kelahiran, panduan tumbuh kembang anak, aplikasi teman parenting, portal informasi parenting, rekomendasi produk bayi" />
+  <meta name="robots" content="index, follow" />
+  <meta name="publisher" content="Teman Parenting" />
+  <meta name="author" content="Teman Parenting" />
+  <link rel="canonical" href="https://temanparenting.web.id/" />
+
+  <!-- ORGANIZATION & SOCIAL PROFILES SCHEMA MARKUP (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Teman Parenting",
+    "url": "https://temanparenting.web.id/",
+    "logo": "https://temanparenting.web.id/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/teman_parenting.id",
+      "https://www.tiktok.com/@temanparenting.id",
+      "https://www.youtube.com/",
+      "https://www.facebook.com/profile.php?id=61581943449744"
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700;800&display=swap"
@@ -138,6 +170,42 @@
     }
 
     /* Mobile nav */
+    .nav-links-desktop {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--dark);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link:hover {
+      color: var(--teal);
+    }
+
+    .nav-link.active {
+      color: var(--teal);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--teal);
+      border-radius: 999px;
+    }
+
     .hamburger {
       display: none;
       background: none;
@@ -193,6 +261,11 @@
       background: rgba(221, 247, 239, 0.4);
     }
 
+    #mobile-menu a.active {
+      color: var(--teal);
+      background: rgba(221, 247, 239, 0.4);
+    }
+
     #mobile-menu hr {
       border: none;
       border-top: 1px solid rgba(221, 247, 239, 0.6);
@@ -202,10 +275,21 @@
     #mobile-menu .btn-primary {
       width: 100%;
       justify-content: center;
-      margin-top: 4px;
+      margin-top: 8px;
       padding: 14px;
       font-size: 1rem;
       border-radius: 14px;
+      background: linear-gradient(135deg, var(--teal) 0%, #25D366 100%);
+      box-shadow: 0 4px 15px rgba(20, 184, 184, 0.2);
+      border: none;
+      font-weight: 800;
+      transition: all 0.3s ease;
+    }
+
+    #mobile-menu .btn-primary:hover {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, #128C7E 100%);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+      transform: translateY(-1px);
     }
 
     @media (max-width: 767px) {
@@ -216,6 +300,10 @@
       }
 
       .btn-nav-desktop {
+        display: none;
+      }
+
+      .nav-links-desktop {
         display: none;
       }
     }
@@ -341,6 +429,34 @@
       background: var(--teal-dark);
       transform: translateY(-2px);
       box-shadow: 0 10px 28px rgba(20, 184, 184, 0.3);
+    }
+
+    .hero-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.9rem;
+      background: white;
+      color: var(--teal);
+      text-decoration: none;
+      border: 2px solid var(--teal);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s;
+    }
+
+    .hero-cta-secondary:hover {
+      background: var(--mint);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(20, 184, 184, 0.1);
+    }
+
+    .hero-cta-secondary svg {
+      width: 14px;
+      height: 14px;
     }
 
     .hero-cta svg {
@@ -539,7 +655,8 @@
         font-size: 2.4rem;
       }
 
-      .hero-cta {
+      .hero-cta,
+      .hero-cta-secondary {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -1826,6 +1943,47 @@
       font-weight: 500;
     }
 
+    /* Custom product CTA styling */
+    .product-cta-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 48px;
+      position: relative;
+      z-index: 10;
+      padding: 0 24px;
+    }
+
+    .btn-secondary-custom {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 32px;
+      border-radius: 14px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      background: white;
+      color: var(--teal);
+      text-decoration: none;
+      border: 2px solid var(--teal);
+      transition: all 0.2s;
+      min-height: 48px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+      text-align: center;
+    }
+
+    .btn-secondary-custom:hover {
+      background: var(--mint);
+    }
+
+    @media (max-width: 640px) {
+      .btn-secondary-custom {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
     /* ── EMPTY STATE ──────────────────────────────────────────── */
     .empty-state {
       max-width: 400px;
@@ -1898,6 +2056,296 @@
         transition: none !important;
       }
     }
+    /* ── PETA PERJALANAN ────────────────────────────────────── */
+    .journey-section {
+      padding: 60px 0;
+      background: var(--offwhite);
+    }
+
+    .journey-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .journey-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .journey-h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3vw, 2.25rem);
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .journey-sub {
+      font-size: 1rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    .journey-card {
+      background: white;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(221, 247, 239, 0.8);
+      text-align: center;
+    }
+
+    .journey-question {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .journey-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .journey-option {
+      cursor: pointer;
+    }
+
+    .journey-option input {
+      display: none;
+    }
+
+    .option-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 24px;
+      border-radius: 16px;
+      border: 2px solid var(--gray-100);
+      background: var(--offwhite);
+      transition: all 0.2s;
+    }
+
+    .journey-option input:checked + .option-content {
+      border-color: var(--teal);
+      background: rgba(221, 247, 239, 0.3);
+      box-shadow: 0 4px 12px rgba(20, 184, 184, 0.1);
+    }
+
+    .option-icon {
+      font-size: 2.5rem;
+    }
+
+    .option-text {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--dark);
+    }
+
+    .journey-input-group {
+      text-align: left;
+      margin-bottom: 24px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .journey-input-group label {
+      display: block;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .journey-date-input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #D1D5DB;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      color: var(--dark);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .journey-date-input:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(20, 184, 184, 0.15);
+    }
+
+    .journey-cta {
+      width: 100%;
+      justify-content: center;
+      padding: 16px;
+      font-size: 1.05rem;
+      border-radius: 14px;
+    }
+    
+    @media (max-width: 640px) {
+      .journey-options {
+        grid-template-columns: 1fr;
+      }
+      .journey-card {
+        padding: 24px;
+      }
+    }
+    
+    /* ── ARTICLES SECTION ── */
+    #artikel-beranda {
+      padding: 80px 24px;
+      background: var(--offwhite);
+    }
+    .articles-slider-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .articles-swipe-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      padding: 20px 0;
+    }
+    .home-article-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+      border: 1px solid rgba(20, 184, 184, 0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      animation: articleCardIn 0.6s ease-out both;
+    }
+    .home-article-card:nth-child(1) { animation-delay: 0.1s; }
+    .home-article-card:nth-child(2) { animation-delay: 0.2s; }
+    .home-article-card:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes articleCardIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .home-article-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(20, 184, 184, 0.15);
+    }
+    .home-article-thumb-wrapper {
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+    }
+    .home-article-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .home-article-card:hover .home-article-thumb {
+      transform: scale(1.08);
+    }
+    .home-article-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .home-article-tag {
+      align-self: flex-start;
+      background: var(--mint);
+      color: var(--teal);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+    }
+    .home-article-title {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 10px;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .home-article-excerpt {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .home-article-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      font-weight: 700;
+    }
+    .home-article-more {
+      color: var(--teal);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 800;
+      transition: gap 0.25s ease;
+    }
+    .home-article-card:hover .home-article-more {
+      gap: 8px;
+    }
+    .articles-cta-wrap {
+      text-align: center;
+      margin-top: 44px;
+    }
+    
+    /* Tablet: 2 columns, scrollable */
+    @media (max-width: 991px) {
+      .articles-swipe-wrapper {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .articles-swipe-wrapper::-webkit-scrollbar { display: none; }
+      .home-article-card {
+        flex: 0 0 calc(50% - 14px);
+        min-width: 300px;
+        scroll-snap-align: start;
+      }
+    }
+    /* Mobile: single card swipe */
+    @media (max-width: 640px) {
+      .home-article-card {
+        flex: 0 0 85%;
+        min-width: 260px;
+      }
+      #artikel-beranda {
+        padding: 60px 16px;
+      }
+    }
   </style>
 </head>
 
@@ -1908,18 +2356,23 @@
   <!-- ╚══════════════════════════════════════╝ -->
   <header id="main-header">
     <div class="header-inner">
-      <a href="#beranda" class="logo-link">
+      <a href="index.html" class="logo-link">
         <img src="logo.png" class="logo-img"
-          alt="Logo Teman Parenting" referrerpolicy="no-referrer"
+          alt="Logo Teman Parenting - Portal Informasi &amp; Edukasi Parenting" referrerpolicy="no-referrer"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <div
           style="display:none; width:40px; height:40px; border-radius:12px; background:#14B8B8; color:white; align-items:center; justify-content:center; font-family:'Quicksand',sans-serif; font-weight:800; font-size:1rem;">
           TP</div>
         <span class="logo-name">Teman Parenting</span>
       </a>
+      <nav class="nav-links-desktop">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="produk.html" class="nav-link">Produk</a>
+        <a href="artikel.html" class="nav-link">Artikel</a>
+      </nav>
       <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer" class="btn-primary btn-nav-desktop">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.372a9.994 9.994 0 0 0 4.78 1.22h.004c5.505 0 9.988-4.478 9.99-9.984A9.99 9.99 0 0 0 12.012 2zm5.727 14.184c-.314.887-1.526 1.628-2.1 1.702-.555.071-1.282.1-3.69-.893-2.91-1.198-4.786-4.17-4.93-4.364-.143-.193-1.164-1.547-1.164-2.95 0-1.403.734-2.09.996-2.364.262-.274.577-.34.77-.34.192 0 .385.002.553.01.177.009.414-.067.648.497.24.58.82 2.003.89 2.148.07.145.117.314.02.5-.094.188-.142.304-.282.47-.14.165-.295.37-.42.496-.138.138-.282.288-.12.568.163.28 1.22 2.01 2.624 3.012 1.134.81 2.094 1.06 2.39 1.201.294.14.467.117.643-.086.176-.203.754-.877.954-1.177.2-.3.402-.25.68-.147.278.102 1.76.83 2.064.984.304.153.506.227.58.354.074.127.074.737-.24 1.624z"/>
         </svg>
         Chat Admin
       </a>
@@ -1937,14 +2390,13 @@
       </button>
     </div>
     <div id="mobile-menu">
-      <a href="#beranda" class="mobile-nav-link">Beranda</a>
-      <a href="#produk" class="mobile-nav-link">Produk Digital</a>
-      <a href="#rekomendasi" class="mobile-nav-link">Rekomendasi</a>
-      <a href="#sosial" class="mobile-nav-link">Sosial Media</a>
+      <a href="index.html" class="mobile-nav-link active">Beranda</a>
+      <a href="produk.html" class="mobile-nav-link">Produk</a>
+      <a href="artikel.html" class="mobile-nav-link">Artikel</a>
       <hr />
       <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer" class="btn-primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.372a9.994 9.994 0 0 0 4.78 1.22h.004c5.505 0 9.988-4.478 9.99-9.984A9.99 9.99 0 0 0 12.012 2zm5.727 14.184c-.314.887-1.526 1.628-2.1 1.702-.555.071-1.282.1-3.69-.893-2.91-1.198-4.786-4.17-4.93-4.364-.143-.193-1.164-1.547-1.164-2.95 0-1.403.734-2.09.996-2.364.262-.274.577-.34.77-.34.192 0 .385.002.553.01.177.009.414-.067.648.497.24.58.82 2.003.89 2.148.07.145.117.314.02.5-.094.188-.142.304-.282.47-.14.165-.295.37-.42.496-.138.138-.282.288-.12.568.163.28 1.22 2.01 2.624 3.012 1.134.81 2.094 1.06 2.39 1.201.294.14.467.117.643-.086.176-.203.754-.877.954-1.177.2-.3.402-.25.68-.147.278.102 1.76.83 2.064.984.304.153.506.227.58.354.074.127.074.737-.24 1.624z"/>
         </svg>
         Chat Admin
       </a>
@@ -1965,19 +2417,28 @@
           </svg>
           Partner Perjalanan Moms &amp; Dads
         </div>
-        <h1 class="hero-h1">Teman<br />Parenting</h1>
+        <h1 class="hero-h1">Teman Parenting</h1>
         <div class="hero-quote">
           <p>&ldquo;Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan, hingga anak tumbuh
             remaja.&rdquo;</p>
         </div>
-        <p class="hero-sublabel">☘️ Temukan Produk Pilihan Kami:</p>
-        <a href="#produk" class="hero-cta" id="cta-hero-scroll">
-          Lihat Produk Pilihan
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <polyline points="19,12 12,19 5,12" />
-          </svg>
-        </a>
+        <p class="hero-sublabel">☘️ Temukan Solusi &amp; Produk Kami:</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;">
+          <a href="#artikel-beranda" class="hero-cta-secondary">
+            Artikel &amp; Edukasi
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19,12 12,19 5,12" />
+            </svg>
+          </a>
+          <a href="#peta-perjalanan" class="hero-cta" id="cta-hero-scroll">
+            Analisa Si Kecil
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19,12 12,19 5,12" />
+            </svg>
+          </a>
+        </div>
       </div>
       <div class="hero-card-wrap">
         <div class="hero-card">
@@ -2027,6 +2488,68 @@
 
 
   <!-- ╔══════════════════════════════════════╗ -->
+  <!--  PETA PERJALANAN SI KECIL             -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="peta-perjalanan" class="journey-section">
+    <div class="section-inner">
+      <div class="journey-container">
+        <div class="journey-header">
+          <div class="section-tag section-tag-lavender">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .5-4.5 4 1 6-5.5-3-5.5 3 1-6-4.5-4 6-.5z"/></svg>
+            Analisa Personal
+          </div>
+          <h2 class="journey-h2">Peta Perjalanan Si Kecil</h2>
+          <p class="journey-sub">Ketahui fase penting perkembangan si kecil dan apa yang perlu disiapkan oleh Moms &amp; Dads saat ini.</p>
+        </div>
+        
+        <div class="journey-card">
+          <p class="journey-question">Moms &amp; Dads sedang di fase apa?</p>
+          <div class="journey-options">
+            <label class="journey-option">
+              <input type="radio" name="journey_status" value="hamil" onclick="toggleJourneyInput()">
+              <div class="option-content">
+                <span class="option-icon">🤰</span>
+                <span class="option-text">Sedang Hamil</span>
+              </div>
+            </label>
+            <label class="journey-option">
+              <input type="radio" name="journey_status" value="anak" onclick="toggleJourneyInput()">
+              <div class="option-content">
+                <span class="option-icon">👶</span>
+                <span class="option-text">Sudah Punya Anak</span>
+              </div>
+            </label>
+          </div>
+          
+          <div id="journey-input-hamil" class="journey-input-group" style="display: none;">
+            <label style="margin-bottom: 12px;">Pilih Jenis Tanggal:</label>
+            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+              <label style="display: flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                <input type="radio" name="date_type" value="hpl" checked onclick="updateDateLabel()"> HPL
+              </label>
+              <label style="display: flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                <input type="radio" name="date_type" value="hpht" onclick="updateDateLabel()"> HPHT
+              </label>
+            </div>
+            <label id="label-date-hamil" for="date-hamil">Masukkan HPL (Hari Perkiraan Lahir):</label>
+            <input type="date" id="date-hamil" class="journey-date-input">
+          </div>
+          
+          <div id="journey-input-anak" class="journey-input-group" style="display: none;">
+            <label for="date-anak">Masukkan Tanggal Lahir Anak:</label>
+            <input type="date" id="date-anak" class="journey-date-input">
+          </div>
+          
+          <button class="btn-primary journey-cta" id="journey-btn" style="display: none;" onclick="processJourney()">
+            Lihat Analisa Perjalananku
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
   <!--  PRODUCTS CATALOG                     -->
   <!-- ╚══════════════════════════════════════╝ -->
   <section id="produk">
@@ -2034,7 +2557,7 @@
     <div class="section-inner">
       <div class="catalog-header">
         <div class="catalog-tag">✨ Pilihan Ibu &amp; Keluarga</div>
-        <h2 class="catalog-h2">Katalog &amp; Rekomendasi</h2>
+        <h2 class="catalog-h2">Rekomendasi Produk Parenting</h2>
         <p class="catalog-sub">Dapatkan sarana digital premium dan produk fisik bayi pilihan yang tervalidasi serta
           murni membantu pengasuhan harian Anda.</p>
       </div>
@@ -2086,7 +2609,7 @@
                 </div>
               </div>
               <div>
-                <div class="cover-eyebrow">Alat Bantu Orangtua</div>
+                <div class="cover-eyebrow">Persiapan Persalinan</div>
                 <h3 class="cover-title">Baby Budget Plan</h3>
               </div>
             </div>
@@ -2129,7 +2652,7 @@
                   <span><strong id="count-baby-budget-plan">0</strong> Pengguna Mencoba</span>
                 </div>
               </div>
-              <a href="https://openinapp.link/ogqcd" target="_blank" rel="noreferrer"
+              <a href="https://babyplan.my.id/" target="_blank" rel="noreferrer"
                 class="btn-card-cta" onclick="trackClick('baby-budget-plan')">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
@@ -2167,7 +2690,7 @@
                 </div>
               </div>
               <div>
-                <div class="cover-eyebrow">Alat Bantu Orangtua</div>
+                <div class="cover-eyebrow">Inspirasi Identitas</div>
                 <h3 class="cover-title">Nama Kecil</h3>
               </div>
             </div>
@@ -2247,7 +2770,7 @@
                 </div>
               </div>
               <div>
-                <div class="cover-eyebrow">Alat Bantu Orangtua</div>
+                <div class="cover-eyebrow">Edukasi Tumbuh Kembang</div>
                 <h3 class="cover-title">OrtuPedia</h3>
               </div>
             </div>
@@ -2324,7 +2847,7 @@
                 </div>
               </div>
               <div>
-                <div class="cover-eyebrow">Alat Bantu Orangtua</div>
+                <div class="cover-eyebrow">Bonding &amp; Afirmasi</div>
                 <h3 class="cover-title">CeritaKecil</h3>
               </div>
             </div>
@@ -2407,7 +2930,7 @@
                   style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Perlengkapan
                   Harian</span>
               </div>
-              <a href="https://s.shopee.co.id/40dgyxA38d" target="_blank" rel="noreferrer" class="rec-link">
+              <a href="https://s.shopee.co.id/6VLvRXre3B" target="_blank" rel="noreferrer" class="rec-link">
                 🛍️ Beli Produk Ternyaman
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
@@ -2432,7 +2955,7 @@
                   style="font-size:0.6rem; font-weight:700; background:#F3F4F6; color:#6B7280; padding:3px 8px; border-radius:6px;">Pakaian
                   Bayi</span>
               </div>
-              <a href="https://s.shopee.co.id/7pqPY6Ifu0" target="_blank" rel="noreferrer" class="rec-link">
+              <a href="https://s.shopee.co.id/AKYe0h6Fd7" target="_blank" rel="noreferrer" class="rec-link">
                 🛍️ Beli Produk Ternyaman
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
@@ -2455,6 +2978,105 @@
         </div>
       </div><!-- /tab-rekomendasi -->
 
+      <!-- CTA Buttons to Products -->
+      <div class="product-cta-wrap">
+        <a href="produk.html" class="btn-secondary-custom">
+          Lihat Semua Produk Pilihan
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!--  ARTIKEL EDUKASI                        -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="artikel-beranda">
+    <div class="articles-slider-container">
+      <div class="catalog-header" style="text-align: center; margin-bottom: 40px;">
+        <div class="catalog-tag">📚 Artikel Terpilih</div>
+        <h2 class="catalog-h2">Edukasi Parenting Terbaru</h2>
+        <p style="font-size: 0.95rem; color: var(--gray-500); max-width: 520px; margin: 12px auto 0; line-height: 1.6;">Panduan praktis dari tim Teman Parenting untuk menemani setiap fase perjalanan Moms &amp; Dads</p>
+      </div>
+
+      <div class="articles-swipe-wrapper">
+        <!-- Article 1 -->
+        <a href="artikel.html?id=persiapan-kehamilan-sehat" class="home-article-card">
+          <div class="home-article-thumb-wrapper">
+            <img class="home-article-thumb" src="assets/article_pregnancy.png" alt="Persiapan Kehamilan Sehat" loading="lazy" />
+          </div>
+          <div class="home-article-content">
+            <span class="home-article-tag">Promil &amp; Kehamilan</span>
+            <h3 class="home-article-title">Persiapan Kehamilan Sehat: Nutrisi Penting untuk Calon Ibu</h3>
+            <p class="home-article-excerpt">Merencanakan kehamilan membutuhkan persiapan fisik dan mental yang matang bagi Moms &amp; Dads. Temukan berbagai nutrisi mikro dan makro esensial yang wajib dipenuhi sejak masa promil.</p>
+            <div class="home-article-footer">
+              <span>⏱ 5 menit baca</span>
+              <span class="home-article-more">
+                Baca Artikel
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12,5 19,12 12,19" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="artikel.html?id=panduan-mpasi-pertama" class="home-article-card">
+          <div class="home-article-thumb-wrapper">
+            <img class="home-article-thumb" src="assets/article_nutrition.png" alt="Panduan MPASI Pertama" loading="lazy" />
+          </div>
+          <div class="home-article-content">
+            <span class="home-article-tag">Nutrisi Anak &amp; Ibu</span>
+            <h3 class="home-article-title">Panduan MPASI Pertama Si Kecil: Menu 4 Bintang yang Seimbang</h3>
+            <p class="home-article-excerpt">Saat Si Kecil memasuki usia 6 bulan, ASI saja tidak lagi mencukupi kebutuhan gizinya. Simak panduan praktis MPASI pertama dengan gizi seimbang dan porsi yang sesuai.</p>
+            <div class="home-article-footer">
+              <span>⏱ 6 menit baca</span>
+              <span class="home-article-more">
+                Baca Artikel
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12,5 19,12 12,19" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="artikel.html?id=jadwal-imunisasi-idai" class="home-article-card">
+          <div class="home-article-thumb-wrapper">
+            <img class="home-article-thumb" src="assets/article_vaccine.png" alt="Jadwal Imunisasi Anak" loading="lazy" />
+          </div>
+          <div class="home-article-content">
+            <span class="home-article-tag">Vaksin &amp; Kesehatan Anak</span>
+            <h3 class="home-article-title">Jadwal Imunisasi Anak Rekomendasi IDAI Terbaru</h3>
+            <p class="home-article-excerpt">Lindungi buah hati dari berbagai penyakit berbahaya dengan melengkapi imunisasi wajib. Ketahui jadwal lengkap imunisasi rekomendasi IDAI terbaru tahun ini.</p>
+            <div class="home-article-footer">
+              <span>⏱ 4 menit baca</span>
+              <span class="home-article-more">
+                Baca Artikel
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12,5 19,12 12,19" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Button Lihat Semua -->
+      <div class="articles-cta-wrap">
+        <a href="artikel.html" class="btn-primary" style="font-size: 0.9rem; padding: 14px 32px;">
+          Lihat Semua Artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12,5 19,12 12,19" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -2496,7 +3118,7 @@
       </div>
 
       <div class="socials-grid">
-        <a href="https://www.instagram.com/teman_parenting.id?igsh=eTM4Y2p4djV6NnBl" target="_blank" rel="noreferrer"
+        <a href="https://www.instagram.com/teman_parenting.id" target="_blank" rel="noreferrer"
           class="social-card">
           <div class="social-icon ig">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2508,7 +3130,7 @@
           <span class="social-label">Instagram</span>
           <span class="social-sublabel">Instagram</span>
         </a>
-        <a href="https://www.tiktok.com/@temanparenting.id?_r=1&_t=ZS-913duYl2Ee0" target="_blank" rel="noreferrer"
+        <a href="https://www.tiktok.com/@temanparenting.id" target="_blank" rel="noreferrer"
           class="social-card">
           <div class="social-icon tiktok">
             <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
@@ -2519,7 +3141,7 @@
           <span class="social-label">TikTok</span>
           <span class="social-sublabel">TikTok</span>
         </a>
-        <a href="https://www.youtube.com/@temanparenting" target="_blank" rel="noreferrer" class="social-card">
+        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" class="social-card">
           <div class="social-icon youtube">
             <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
               <path
@@ -2587,7 +3209,7 @@
         <div>
           <div class="footer-logo">
             <img src="logo.png" class="footer-logo-img"
-              alt="Logo Teman Parenting" referrerpolicy="no-referrer" onerror="this.style.display='none';" />
+              alt="Logo Teman Parenting - Rekomendasi Produk Bayi &amp; Panduan Tumbuh Kembang Anak" referrerpolicy="no-referrer" onerror="this.style.display='none';" />
             <span class="footer-brand-name">Teman Parenting</span>
           </div>
           <p class="footer-quote">&ldquo;Temani setiap langkahmu menjadi orang tua, dari rencana hamil, masa kehamilan,
@@ -2601,8 +3223,7 @@
             <a href="#sosial">Sosial Media</a>
           </nav>
           <p class="footer-contact">
-            Butuh bantuan pemesanan? Chat ke <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer">+62
-              851-1132-4256</a>
+            Kontak: <a href="https://wa.me/6285111324256" target="_blank" rel="noreferrer">+62 851-1132-4256</a>
           </p>
         </div>
       </div>
@@ -2754,6 +3375,71 @@
       var ua = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
       var isDebug = window.location.search.indexOf("debug=tiktok") > -1 || window.location.search.indexOf("debug=1") > -1;
       var isTikTok = ua.indexOf("tiktok") > -1 || ua.indexOf("musical_ly") > -1 || ua.indexOf("trill") > -1 || ua.indexOf("bytedancewebview") > -1 || isDebug;
+      var isAndroid = ua.indexOf("android") > -1;
+      
+      window.isTikTok = isTikTok;
+      window.isAndroid = isAndroid;
+      window.showTikTokNotice = showTikTokNotice;
+
+      // Automatic Android TikTok Escape
+      if (isAndroid && isTikTok) {
+        document.addEventListener('click', function(e) {
+          var anchor = e.target.closest('a');
+          if (anchor && anchor.href) {
+            var href = anchor.href;
+            var rawHref = anchor.getAttribute('href') || '';
+            // Ignore hash links, javascript actions, or mailto/tel protocols
+            if (href && !href.startsWith('javascript:') && !href.startsWith('#') && !rawHref.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+              e.preventDefault();
+              e.stopPropagation();
+              
+              var absoluteUrl = anchor.href;
+              var withoutProtocol = absoluteUrl.replace(/^https?:\/\//, '');
+              var protocol = absoluteUrl.startsWith('https') ? 'https' : 'http';
+              var intentUrl = 'intent://' + withoutProtocol + '#Intent;scheme=' + protocol + ';end';
+              window.location.href = intentUrl;
+            }
+          }
+        }, true);
+      }
+
+      // Manual iOS TikTok Escape Guide for all links/buttons
+      if (!isAndroid && isTikTok) {
+        document.addEventListener('click', function(e) {
+          var anchor = e.target.closest('a');
+          if (anchor && anchor.href) {
+            var href = anchor.href;
+            var rawHref = anchor.getAttribute('href') || '';
+            // Ignore hash links, javascript actions, or mailto/tel protocols
+            if (href && !href.startsWith('javascript:') && !href.startsWith('#') && !rawHref.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+              e.preventDefault();
+              e.stopPropagation();
+              
+              var displayName = 'Halaman';
+              if (anchor.classList.contains('btn-card-cta')) {
+                var onclickAttr = anchor.getAttribute('onclick') || '';
+                var match = onclickAttr.match(/'([^']+)'/);
+                var productKey = match ? match[1] : '';
+                var productNames = {
+                  'baby-budget-plan': 'Baby Budget Plan',
+                  'nama-kecil': 'Nama Kecil',
+                  'ortupedia': 'Ortupedia',
+                  'ceritakecil': 'Cerita Kecil'
+                };
+                displayName = productNames[productKey] || 'Aplikasi';
+              } else if (href.includes('shopee.co.id') || anchor.classList.contains('btn-physical-cta') || anchor.classList.contains('rec-link')) {
+                displayName = 'Rekomendasi Produk';
+              } else {
+                var text = anchor.textContent.trim();
+                text = text.replace(/[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF]/g, '').trim();
+                displayName = text || 'Halaman';
+              }
+              
+              showTikTokNotice(displayName);
+            }
+          }
+        }, true);
+      }
 
       if (window.location.search.indexOf("show_ua=1") > -1) {
         alert("UA: " + navigator.userAgent);
@@ -2928,6 +3614,75 @@
         });
       }
     })();
+  </script>
+  <script>
+    function updateDateLabel() {
+      const type = document.querySelector('input[name="date_type"]:checked').value;
+      const label = document.getElementById('label-date-hamil');
+      if (type === 'hpl') {
+        label.textContent = 'Masukkan HPL (Hari Perkiraan Lahir):';
+      } else {
+        label.textContent = 'Masukkan HPHT (Hari Pertama Haid Terakhir):';
+      }
+    }
+
+    function toggleJourneyInput() {
+      const status = document.querySelector('input[name="journey_status"]:checked').value;
+      const hamilGroup = document.getElementById('journey-input-hamil');
+      const anakGroup = document.getElementById('journey-input-anak');
+      const btn = document.getElementById('journey-btn');
+      
+      if (status === 'hamil') {
+        hamilGroup.style.display = 'block';
+        anakGroup.style.display = 'none';
+      } else {
+        hamilGroup.style.display = 'none';
+        anakGroup.style.display = 'block';
+      }
+      
+      btn.style.display = 'inline-flex';
+    }
+
+    function processJourney() {
+      const status = document.querySelector('input[name="journey_status"]:checked').value;
+      let dateVal = '';
+      let dateType = '';
+      
+      if (status === 'hamil') {
+        dateVal = document.getElementById('date-hamil').value;
+        dateType = document.querySelector('input[name="date_type"]:checked').value;
+      } else {
+        dateVal = document.getElementById('date-anak').value;
+        dateType = 'anak';
+      }
+      
+      if (!dateVal) {
+        alert('Mohon masukkan tanggal terlebih dahulu.');
+        return;
+      }
+      
+      var targetPath = `peta-perjalanan.html?status=${status}&date=${dateVal}&type=${dateType}`;
+      
+      // TikTok In-App Browser Escape logic
+      if (window.isTikTok) {
+        var targetUrl = new URL(targetPath, window.location.href).href;
+        if (window.isAndroid) {
+          var withoutProtocol = targetUrl.replace(/^https?:\/\//, '');
+          var protocol = targetUrl.startsWith('https') ? 'https' : 'http';
+          var intentUrl = 'intent://' + withoutProtocol + '#Intent;scheme=' + protocol + ';end';
+          window.location.href = intentUrl;
+          return;
+        } else {
+          // iOS
+          if (typeof window.showTikTokNotice === 'function') {
+            window.showTikTokNotice('Analisa Perjalanan');
+            return;
+          }
+        }
+      }
+      
+      window.location.href = targetPath;
+    }
   </script>
 </body>
 
